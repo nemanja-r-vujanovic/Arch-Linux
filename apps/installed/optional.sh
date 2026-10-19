@@ -87,17 +87,22 @@
 # Choose a recovery destination on a different disk/filesystem (example: /run/media/user/USB/)
 # Press C to confirm the destination and begin recovery
 
+# VirtualBox Extension Pack:
+# mkdir -p "$HOME/VirtualBox/"
+# mv "Oracle_VirtualBox_Extension_Pack"*".vbox-extpack" "$HOME/VirtualBox/"
+
 # Other packages:
-# code           # Visual Studio Code
-# netbeans       # Java GUI designer
-# glade          # C GUI designer
-# nodejs npm     # Web and mobile apps
-# sqlitebrowser  # SQLite browser
-# audacity       # Audio editor
-# wine wine-mono # Wine emulator
-# lutris         # Lutris emulator
-# persepolis     # Download manager
-# qbittorrent    # Torrent client
-# gimp           # Adobe Photoshop alternative
-# kdenlive       # Camtasia Studio alternative
-# kolourpaint    # Microsoft Paint alternative
+# code                                               # Visual Studio Code
+# netbeans                                           # Java GUI designer
+# glade                                              # C GUI designer
+# nodejs npm                                         # Web and mobile apps
+# sqlitebrowser                                      # SQLite browser
+# audacity                                           # Audio editor
+# wine wine-mono                                     # Wine emulator
+# lutris                                             # Lutris emulator
+# persepolis                                         # Download manager
+# qbittorrent                                        # Torrent client
+# gimp                                               # Adobe Photoshop alternative
+# kdenlive                                           # Camtasia Studio alternative
+# kolourpaint                                        # Microsoft Paint alternative
+# virtualbox virtualbox-host-dkms dkms linux-headers # VirtualBox
