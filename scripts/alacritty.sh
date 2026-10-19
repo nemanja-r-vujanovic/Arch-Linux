@@ -1,10 +1,20 @@
 #!/bin/bash
 
-echo -n "[font]
+cat > "$HOME/.config/alacritty/alacritty.toml" <<'EOF'
+[font]
 size = 30
 
 [window]
-opacity = 0.6" > "$HOME/.config/alacritty/alacritty.toml"
+opacity = 0.6
+decorations = "Full"
+padding = { x = 0, y = 0 }
+
+[scrolling]
+history = 100000
+
+[cursor]
+style = { shape = "Block", blinking = "Never" }
+EOF
 
 echo "Reload configs: Super + Shift + C"
 
