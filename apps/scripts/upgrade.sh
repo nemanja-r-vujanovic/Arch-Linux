@@ -1,8 +1,8 @@
 #!/bin/bash
 
-cntr=$(cat "$HOME/sync/apps/upgrade/counter.txt")
+date=$(cat "$HOME/sync/apps/upgrade/date.txt")
 
-if [[ "0" == "$cntr" ]]; then
+if [[ "" == "$date" ]]; then
 	sday=$(date -d "last sunday" +%d.%m.%Y.)
 	echo "$sday" > "$HOME/sync/apps/upgrade/date.txt"
 fi
