@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sed -i "s|exec i3-sensible-terminal|exec alacritty|g" "$HOME/.config/i3/config"
-sed -i 's|bindsym \$mod+d exec --no-startup-id dmenu_run|bindsym $mod+d exec --no-startup-id bindsym $mod+d exec --no-startup-id "$HOME/sync/apps/scripts/dmenu.sh"|g' "$HOME/.config/i3/config"
+sed -i 's|bindsym \$mod+d exec --no-startup-id dmenu_run|bindsym $mod+d exec --no-startup-id "$HOME/sync/apps/scripts/dmenu.sh"|g' "$HOME/.config/i3/config"
 sed -i "s|font pango:monospace 8|font pango:DejaVu Sans 20|g" "$HOME/.config/i3/config"
 sed -i "s|#font pango:DejaVu Sans Mono 8|font pango:DejaVu Sans 20|g" "$HOME/.config/i3/config"
 
