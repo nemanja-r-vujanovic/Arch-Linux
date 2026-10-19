@@ -88,6 +88,7 @@
 # Press C to confirm the destination and begin recovery
 
 # Other packages:
+# code           # Visual Studio Code
 # netbeans       # Java GUI designer
 # glade          # C GUI designer
 # nodejs npm     # Web and mobile apps
