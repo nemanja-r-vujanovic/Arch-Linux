@@ -23,4 +23,4 @@ chmod +x "/mnt/home/$username/sync/apps/installed/"*".sh"
 rm -r "/mnt/home/$username/Archie/"
 
 # Fix ownership:
-arch-chroot "/mnt/" chown -R "$username":"users" "/home/$username/"
+arch-chroot "/mnt/" chown -R "$username":"$username" "/home/$username/"
