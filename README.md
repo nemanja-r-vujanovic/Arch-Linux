@@ -75,7 +75,7 @@ pacman -S -y --needed --noconfirm git
 git clone "https://github.com/nemanja-r-vujanovic/Arch-Linux.git"
 ```
 ```bash
-vim "Arch-Linux/install/inputs.sh"  # For automated install: ":FROM,TOd"
+vim "Arch-Linux/install/inputs.sh"  # For automated install: ":10,89d"
 ```
 ```bash
 chmod +x "Arch-Linux/install/"*
