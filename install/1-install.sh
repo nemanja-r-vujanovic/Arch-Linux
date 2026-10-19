@@ -1,0 +1,26 @@
+#!/bin/bash
+
+source "Arch-Linux/install/checks.sh"
+source "Arch-Linux/install/font.sh"
+source "Arch-Linux/install/ntp.sh"
+source "Arch-Linux/install/clear.sh"
+source "Arch-Linux/install/lsblk.sh"
+source "Arch-Linux/install/inputs.sh"
+source "Arch-Linux/install/partitioning.sh"
+source "Arch-Linux/install/base.sh"
+source "Arch-Linux/install/fstab.sh"
+# ...
+source "Arch-Linux/install/chroot.sh"
+source "Arch-Linux/install/time.sh"
+source "Arch-Linux/install/locale.sh"
+source "Arch-Linux/install/hostname.sh"
+source "Arch-Linux/install/hosts.sh"
+source "Arch-Linux/install/root-passwd.sh"
+source "Arch-Linux/install/packages.sh"
+source "Arch-Linux/install/zram.sh"
+source "Arch-Linux/install/bootloader.sh"
+source "Arch-Linux/install/user-passwd.sh"
+source "Arch-Linux/install/sudo-wheel.sh"
+# ...
+source "Arch-Linux/install/files.sh"
+source "Arch-Linux/install/poweroff.sh"
