@@ -12,6 +12,7 @@ exec --no-startup-id "$HOME/sync/apps/scripts/upgrade.sh"
 exec --no-startup-id "$HOME/sync/apps/scripts/wireplumber.sh"
 exec --no-startup-id "$HOME/sync/apps/scripts/policykit.sh"
 exec --no-startup-id "$HOME/sync/apps/scripts/dunst.sh"
+exec --no-startup-id "$HOME/sync/apps/scripts/wallpaper.sh"
 
 bindsym $mod+c exec "$HOME/sync/apps/sandbox/scripts/chromium-standard.sh"
 bindsym $mod+i exec "$HOME/sync/apps/sandbox/scripts/chromium-incognito.sh"
