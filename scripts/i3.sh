@@ -19,6 +19,7 @@ bindsym $mod+b exec "$HOME/sync/apps/sandbox/scripts/chromium-sandboxed.sh"
 bindsym $mod+p exec "$HOME/sync/apps/scripts/pcmanfm.sh"
 bindsym $mod+Print exec --no-startup-id "$HOME/sync/apps/scripts/scrot.sh"
 bindsym $mod+t exec --no-startup-id "$HOME/sync/apps/scripts/picom.sh"
+bindsym $mod+Shift+p exec --no-startup-id "$HOME/sync/apps/scripts/autorandr.sh"
 
 bar
 {
