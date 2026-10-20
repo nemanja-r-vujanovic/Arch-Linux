@@ -9,6 +9,7 @@ bash "$HOME/sync/scripts/alacritty.sh"
 bash "$HOME/sync/scripts/i3.sh"
 bash "$HOME/sync/scripts/i3status.sh"
 bash "$HOME/sync/scripts/pcmanfm.sh"
+bash "$HOME/sync/scripts/projector.sh"
 bash "$HOME/sync/scripts/aliases.sh"
 bash "$HOME/sync/scripts/chromium-ublock.sh"
 # ...
