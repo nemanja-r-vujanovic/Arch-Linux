@@ -32,7 +32,7 @@ bar
 }
 EOF
 
-echo "Delete previous bar {} ':FROM,TOd'"
+echo "Delete previous bar {} ':188,190d'"
 
 echo -n "Press Enter to exit."
 read Enter
