@@ -9,7 +9,7 @@ reflector --ipv4 \
 --save "/etc/pacman.d/mirrorlist"
 
 sed -i "/^#\[multilib\]$/,/^#Include = \/etc\/pacman.d\/mirrorlist$/s/^#//" "/etc/pacman.conf"
-pacman -Syy                                   # Refresh package databases
+pacman -S -y -y                               # Refresh package databases
 
 pacman -S --needed --noconfirm \
 base linux linux-firmware sudo reflector \
