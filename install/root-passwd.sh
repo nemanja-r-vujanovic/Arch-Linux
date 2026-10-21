@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "root:$root_password" | chpasswd
+echo "root:$password" | chpasswd

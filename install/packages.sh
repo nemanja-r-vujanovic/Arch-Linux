@@ -43,4 +43,4 @@ systemctl enable polkit.service               # Authorization
 systemctl enable chronyd.service              # Time synchronization
 systemctl enable lightdm.service              # Graphical login
 systemctl enable udisks2.service              # Removable drives
-systemctl enable set-default graphical.target # Boot into graphical mode
+systemctl set-default graphical.target        # Boot into graphical mode
