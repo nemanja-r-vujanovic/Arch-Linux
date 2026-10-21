@@ -22,7 +22,7 @@ pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber libpulse lib32-l
 mpv smplayer vokoscreen \
 xorg xorg-server xorg-xinit \
 lightdm lightdm-gtk-greeter-settings \
-xrandr autorandr redshift xclip \
+xorg-xrandr autorandr redshift xclip \
 zip unzip 7zip unrar tar tree \
 chromium thunderbird libreoffice okular \
 htop scrot flameshot parcellite bleachbit vim pfetch gnome-calculator \
