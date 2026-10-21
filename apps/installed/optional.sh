@@ -127,3 +127,189 @@
 # lxqt                                               # Desktop environment
 # lxqt-session                                       # Session manager
 # openbox                                            # Window manager
+
+# Import Chromium bookmarks:
+## chrome://bookmarks/
+## Top right corner → 3 vertical dots
+## Import bookmarks → Desktop/ → Select bookmarks HTML file → Open
+# Export Chromium bookmarks:
+## chrome://bookmarks/
+## Top right corner → 3 vertical dots
+## Export bookmarks → Desktop/ → Save
+
+# ThunderBird → ImportExportTools NG extension
+# Export:
+## Inbox → ImportExportTools NG → Export All Messages In Folder → Plain Text Format → Messages, Index and Attachments with Subfolder → OK → Desktop/ → Open
+## Sent → ImportExportTools NG → Export All Messages In Folder → Plain Text Format → Messages, Index and Attachments with Subfolder → OK → Desktop/ → Open
+# Import:
+## Inbox → ImportExportTools NG → Import EML Messages → Individual EML Messages → File type: All files (*.*) → Select all Inbox TXT files → Open
+## Sent → ImportExportTools NG → Import EML Messages → Individual EML Messages → File type: All files (*.*) → Select all Sent TXT files → Open
+
+# Browser bookmarks: google.com (Google), youtube.com (YouTube), chess.com/home (Chess), chatgpt.com (ChatGPT), github.com/nemanja-r-vujanovic?tab=repositories (GitHub), ar.asss.edu.rs (ASSS-AR), onedrive.live.com/my (OneDrive), outlook.live.com/mail/ (Outlook), wiki.archlinux.org (ArchWiki), supabase.com/dashboard/organizations (Supabase)
+
+# Journald:
+# sudo vim "/etc/systemd/journald.conf"
+# SystemMaxUse=256M
+# MaxRetentionSec=7day
+# sudo systemctl restart systemd-journald
+
+# Grub customizer without grub customizer:
+# sudo vim "/etc/default/grub"
+
+: <<'NOTES'
+GRUB_TIMEOUT_STYLE="menu"
+GRUB_GFXMODE="800x600"
+GRUB_GFXPAYLOAD_LINUX="keep"
+GRUB_DEFAULT="Arch Linux"
+GRUB_DISTRIBUTOR="Arch"
+GRUB_TIMEOUT="2"
+GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet"
+NOTES
+
+# sudo grub-mkconfig -o "/boot/grub/grub.cfg"
+# sudo vim "/boot/grub/grub.cfg"
+
+# Delete completely:
+# submenu 'Advanced options for Arch Linux' ... {}
+: <<'NOTES'
+### BEGIN /etc/grub.d/30_uefi-firmware ###
+if [ "$grub_platform" = "efi" ]; then
+	fwsetup --is-supported
+	if [ "$?" = 0 ]; then
+		menuentry 'UEFI Firmware Settings' $menuentry_id_option 'uefi-firmware' {
+			fwsetup
+		}
+	fi
+fi
+### END /etc/grub.d/30_uefi-firmware ###
+NOTES
+
+# System installed (date):
+# stat / | grep -i "birth"
+
+# Remove programs from Open With:
+# vim "$HOME/.config/mimeapps.list"
+
+# USB formating:
+# lsblk                                              # List disk partitions
+# sudo umount "/dev/sdx"*                            # Unmount drive
+# sudo wipefs --all "/dev/sdx"                       # sudo dd if="/dev/zero" of="/dev/sdy" status=progress
+# sudo cfdisk "/dev/sdx"                             # Create partition → dos → New → Enter → primary → Write → yes → Quit
+# sudo mkfs.ntfs -Q -L "Label" "/dev/sdxy"
+# sudo mkfs.ext4 -F -L "Label" "/dev/sdxy"
+
+# Safe remove USB on Linux:
+# sudo umount "/dev/sdxy"
+# sudo eject "/dev/sdx"
+
+# Post HTML pages on GitHub:
+# Repo → Settings → Pages → Build and deployment
+# Source: Deploy from a branch
+# Branch: main
+# Folder: /docs
+# Save
+# Chromium → username.github.io/reponame
+
+# Git restore deleted:
+# mkdir -p "$HOME/git-restored/"
+# cd "$HOME/git-restored/"
+# git clone "https://github.com/username/reponame.git"
+# cd "$HOME/git-restored/reponame/"
+# git status
+# git log --oneline --all
+# git restore --source=ABCDEFG -- "Deleted"
+# git status
+# git add "Deleted"
+
+# PDF editing:
+# pdftk "input.pdf" cat 2-end output "output.pdf"
+# pdftk "input.pdf" cat 1-123 output "output.pdf"
+# pdftk *".pdf" cat output "merged_pdfs.pdf"
+
+# Convert PDF to DOCX:
+# lowriter --headless --infilter="writer_pdf_import" --convert-to docx "file.pdf"
+
+# Convert PDF to TXT:
+# pdftotext "file.pdf" "file.txt"
+
+# Convert PNG to TXT:
+# tesseract "image.png" "file"
+
+# xclip clipboard:
+# xclip -selection clipboard < /path_to_file
+
+# Print 158. line from file
+# sed -n '158p' "file"
+
+# Print 140-160 lines from file
+# sed -n '140,160p' "file"
+
+: <<'NOTES'
+exiftool
+
+exiftool -Title="HERE TITLE" \
+		 -Author="HERE AUTHOR" \
+		 -Creator="HERE CREATOR" \
+		 -Producer="LibreOffice" \
+		 "HERE FILENAME"
+
+exiftool "HERE FILENAME"
+NOTES
+
+# SSH and SFTP:
+# sudo pacman -S --needed --noconfirm fail2ban
+# TODO: configure fail2ban!
+
+# Samba:
+# smbclient -L //localhost -N                        # List all shares
+# smbclient //localhost/shared -N                    # List specific share
+# ls
+# pwd
+# cd "dir/"
+# cd "../"
+# get "file.txt"                                     # Download one file
+# get "file.txt" "localname.txt"                     # Download and rename
+# put "localfile.txt"                                # Upload one file
+# mput *".pdf"                                       # Upload multiple files
+# del "file.txt"                                     # Delete one file
+# rmdir "dir/"                                       # Delete one folder
+# exit
+
+# VirtualBox Enable Drag & Drop
+# Update and Upgrade
+# Devices → Insert Guest Additions CD image
+# sudo "path_to_cd/VBoxLinuxAdditions.run"
+# Devices → Drag and Drop → Host To Guest
+# Devices → Upgrade Guest Additions
+# systemctl poweroff
+
+# VirtualBox Enable USB
+# VirtualBox Settings → USB → Add new USB device filter + → Select USB → Select USB 3.0
+
+# Fix VirtualBox (only if needed):
+# sudo usermod -a -G vboxusers "$USER"
+# sudo modprobe -r kvm_amd
+# sudo modprobe -r kvm
+
+# Fix install (only if needed):
+# sudo pacman -S -y -y
+
+# Fix upgrade 1 (only if needed):
+: <<'NOTES'
+REFLECTOR_HERE!
+NOTES
+
+# Fix upgrade 2 (only if needed):
+# sudo rm "/usr/lib/python3.14/site-packages/lightdm_gtk_greeter_settings/__pycache__/installation_config.cpython-314.pyc"
+# sudo rm -r "/usr/lib/python3.14/site-packages/lightdm_gtk_greeter_settings/__pycache__/"
+
+# Fix connection (only if needed):
+# nmcli general status                               # Check status
+# nmcli device status                                # List devices
+# nmcli connection show                              # List connections
+# nmcli device wifi connect "SSID" --ask
+
+# Useful commands:
+: <<'NOTES'
+grep -i -r "test" .                                  # Search all files here for "test" (ignore case)
+NOTES
