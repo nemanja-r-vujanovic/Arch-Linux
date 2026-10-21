@@ -106,3 +106,18 @@
 # kdenlive                                           # Camtasia Studio alternative
 # kolourpaint                                        # Microsoft Paint alternative
 # virtualbox virtualbox-host-dkms dkms linux-headers # VirtualBox
+# ...
+# xscreensaver                                       # Screensaver
+# papirus-icon-theme                                 # Icon theme
+# adwaita-icon-theme                                 # Icon theme
+# breeze                                             # Theme
+# pdftk                                              # PDF toolkit
+# poppler                                            # PDF render
+# perl-image-exiftool                                # PDF metadata
+# tesseract-data-eng                                 # Tesseract OCR engine
+# vanilla-dmz                                        # Minimal mouse cursor
+# ...
+# Replaced with i3:
+# lxqt                                               # Desktop environment
+# lxqt-session                                       # Session manager
+# openbox                                            # Window manager
