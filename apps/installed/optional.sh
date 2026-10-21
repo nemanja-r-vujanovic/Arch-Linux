@@ -296,7 +296,13 @@ NOTES
 
 # Fix upgrade 1 (only if needed):
 : <<'NOTES'
-REFLECTOR_HERE!
+pacman -S -y --needed --noconfirm reflector
+reflector --ipv4 \
+--country Serbia,Bosnia,Croatia,Bulgaria,Romania \
+--latest 10 \
+--protocol https \
+--sort rate \
+--save "/etc/pacman.d/mirrorlist"
 NOTES
 
 # Fix upgrade 2 (only if needed):
