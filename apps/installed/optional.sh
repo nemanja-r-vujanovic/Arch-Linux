@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Check:
+# menu://applications/
+# admin:///usr/share/applications/
+# $HOME/.local/share/applications/
+# $HOME/.config/lxqt/
+# $HOME/.local/share/Trash/
+
 # Python modules:
 # mkdir -p "$HOME/sync/apps/python-modules/"
 # cd "$HOME/sync/apps/python-modules/"
