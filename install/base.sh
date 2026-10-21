@@ -14,4 +14,13 @@ reflector --ipv4 \
 
 pacman -S -y -y # Refresh package databases
 
-pacstrap -K "/mnt/" base linux linux-firmware sudo vim amd-ucode
+mkdir -p "/mnt/etc/"
+
+cat > "/mnt/etc/vconsole.conf" <<'EOF'
+FONT=ter-132b
+KEYMAP=sr-latin
+EOF
+
+pacstrap -K "/mnt/" \
+base linux linux-firmware sudo \
+vim amd-ucode terminus-font

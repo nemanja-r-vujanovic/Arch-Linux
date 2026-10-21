@@ -32,7 +32,7 @@ libcups cups system-config-printer which \
 i3-wm dmenu ttf-dejavu xwallpaper picom libnotify dunst lxqt-policykit polkit udisks2 \
 gnutls lib32-gnutls xdg-utils xdg-desktop-portal xdg-desktop-portal-gtk \
 git python python-pip tk gcc bash \
-mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader vulkan-tools amd-ucode
+mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader vulkan-tools amd-ucode terminus-font
 
 # Configure services:
 systemctl enable ufw.service                  # Firewall

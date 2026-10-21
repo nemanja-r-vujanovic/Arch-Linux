@@ -11,11 +11,11 @@ wipefs -a "$disk"
 parted --script "$disk" mklabel gpt
 
 # Partitioning (GPT):
-# EFI → Size: 512 MB → File System: fat32 → Mount Point: /boot/efi/ → Label: efi → Flags: boot, esp
+# EFI → Size: 512 MB → File System: fat32 → Mount Point: /boot/efi/ → Label: EFI → Flags: boot, esp
 # BIOS → Size: 8 MB → File System: cleared/unformatted → Flags: bios_grub
-# Swap → Size: 4096 MB → File System: linux-swap → Label: swap
-# Local → Size: 2048 MB → File System: ntfs → Label: local → Flags: msftdata
-# Root → Size: Remaining MB → File System: ext4 → Mount Point: / → Label: arch
+# Swap → Size: 4096 MB → File System: linux-swap → Label: SWAP
+# Local → Size: 2048 MB → File System: ntfs → Label: LOCAL → Flags: msftdata
+# Root → Size: Remaining MB → File System: ext4 → Mount Point: / → Label: ARCH
 
 # Size:
 start="1"
@@ -27,27 +27,27 @@ root="100%"
 
 # EFI:
 parted --script "$disk" mkpart primary fat32 "$start"MiB "$efi"MiB
-parted --script "$disk" name 1 "efi"
+parted --script "$disk" name 1 "EFI"
 parted --script "$disk" set 1 boot on
 parted --script "$disk" set 1 esp on
 
 # BIOS:
 parted --script "$disk" mkpart primary "$efi"MiB "$bios"MiB
-parted --script "$disk" name 2 "bios"
+parted --script "$disk" name 2 "BIOS"
 parted --script "$disk" set 2 bios_grub on
 
 # Swap:
 parted --script "$disk" mkpart primary linux-swap "$bios"MiB "$swap"MiB
-parted --script "$disk" name 3 "swap"
+parted --script "$disk" name 3 "SWAP"
 
 # Local:
 parted --script "$disk" mkpart primary ntfs "$swap"MiB "$locl"MiB
-parted --script "$disk" name 4 "local"
+parted --script "$disk" name 4 "LOCAL"
 parted --script "$disk" set 4 msftdata on
 
 # Root:
 parted --script "$disk" mkpart primary ext4 "$locl"MiB "$root"MiB
-parted --script "$disk" name 5 "arch"
+parted --script "$disk" name 5 "ARCH"
 
 partprobe "$disk"
 udevadm settle
@@ -60,11 +60,11 @@ else
 fi
 
 # Format partitions:
-mkfs.fat -F 32 -n "efi" "$P1" # EFI
+mkfs.fat -F 32 -n "EFI" "$P1" # EFI
 wipefs -a "$P2"               # BIOS
-mkswap -L "swap" "$P3"        # Swap
-mkfs.ntfs -Q -L "local" "$P4" # Local
-mkfs.ext4 -F -L "arch" "$P5"  # Root
+mkswap -L "SWAP" "$P3"        # Swap
+mkfs.ntfs -Q -L "LOCAL" "$P4" # Local
+mkfs.ext4 -F -L "ARCH" "$P5"  # Root
 
 # Mount partitions:
 mount -t ext4 "$P5" "/mnt/"
