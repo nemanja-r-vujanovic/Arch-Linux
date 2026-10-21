@@ -91,6 +91,12 @@
 # mkdir -p "$HOME/VirtualBox/"
 # mv "Oracle_VirtualBox_Extension_Pack"*".vbox-extpack" "$HOME/VirtualBox/"
 
+# Download from official sites:
+# Viber (AppImage)
+# XAMPP (run)
+# Ventoy (tar.gz)
+# Android Studio (tar.gz)
+
 # Other packages:
 # code                                               # Visual Studio Code
 # netbeans                                           # Java GUI designer
