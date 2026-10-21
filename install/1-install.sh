@@ -9,18 +9,40 @@ source "Arch-Linux/install/inputs.sh"
 source "Arch-Linux/install/partitioning.sh"
 source "Arch-Linux/install/base.sh"
 source "Arch-Linux/install/fstab.sh"
+
 # ...
-source "Arch-Linux/install/chroot.sh"
-source "Arch-Linux/install/time.sh"
-source "Arch-Linux/install/locale.sh"
-source "Arch-Linux/install/hostname.sh"
-source "Arch-Linux/install/hosts.sh"
-source "Arch-Linux/install/root-passwd.sh"
-source "Arch-Linux/install/packages.sh"
-source "Arch-Linux/install/zram.sh"
-source "Arch-Linux/install/bootloader.sh"
-source "Arch-Linux/install/user-passwd.sh"
-source "Arch-Linux/install/sudo-wheel.sh"
+
+mkdir -p "/mnt/root/install/"
+cp -r "Arch-Linux/install/." "/mnt/root/install/"
+
+arch-chroot "/mnt/" "/bin/bash" -s -- \
+"$timezone" "$username" "$hostname" "$password" "$disk" "$boot_mode" <<'CHROOT'
+timezone="$1"
+username="$2"
+hostname="$3"
+password="$4"
+disk="$5"
+boot_mode="$6"
+
+scripts=(
+	time locale hostname hosts root-passwd
+	packages zram bootloader user-passwd sudo-wheel
+)
+
+for script in "${scripts[@]}"; do
+	printf '\nRunning %s.sh...\n' "$script"
+	source "/root/install/$script.sh"
+done
+CHROOT
+
+if (( 0 != "$?" )); then
+	echo "Installation stopped!"
+	exit 1
+fi
+
+rm -r "/mnt/root/install/"
+
 # ...
+
 source "Arch-Linux/install/files.sh"
 source "Arch-Linux/install/poweroff.sh"
