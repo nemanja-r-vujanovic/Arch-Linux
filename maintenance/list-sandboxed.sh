@@ -1,3 +1,3 @@
 #!/bin/bash
 
-firejail --ls=sandbox "$HOME/Downloads/"
+firejail --ls=sandbox "$HOME/downloads/"
