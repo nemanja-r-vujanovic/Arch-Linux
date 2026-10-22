@@ -1,29 +1,30 @@
-Super + Enter         = Open alacritty
-Ctrl + +              = Increase font in alacritty
-Ctrl + -              = Decrease font in alacritty
+Super + Enter            = Open alacritty
+Ctrl + +                 = Increase font in alacritty
+Ctrl + -                 = Decrease font in alacritty
 
-Super + D             = Open dmenu
-Super + 2             = New workspace
-Super + Left          = Switch to left window
-Super + Right         = Switch to right window
+Super + D                = Open dmenu
+Super + 2                = New workspace
+Super + Left             = Switch to left window
+Super + Right            = Switch to right window
 
-Alt + F4              = Close app
-Ctrl + Q              = Close pcmanfm
+Alt + F4                 = Close app
+Ctrl + Q                 = Close pcmanfm
 
-Super + Shift + Q     = Close alacritty
-Super + Shift + Left  = Move window to left
-Super + Shift + Right = Move window to right
-Super + Shift + Up    = Move window to top
-Super + Shift + Down  = Move window to bottom
-Super + Shift + 2     = Move window to workspace 2
-Super + Shift + Space = Toggle tiling
-Super + Shift + R     = Restart i3
-Super + Shift + C     = Reload configs
+Super + Shift + Q        = Close alacritty
+Super + Shift + Left     = Move window to left
+Super + Shift + Right    = Move window to right
+Super + Shift + Up       = Move window to top
+Super + Shift + Down     = Move window to bottom
+Super + Shift + 2        = Move window to workspace 2
+Super + Shift + Space    = Toggle tiling
+Super + Shift + R        = Restart i3
+Super + Shift + C        = Reload configs
 
-Super + C             = Start chromium (standard)
-Super + I             = Start chromium (incognito)
-Super + B             = Start chromium (sandboxed)
-Super + P             = Start pcmanfm (file manager)
-Super + Print         = Start scrot (screenshot)
-Super + T             = Start picom (transparent alacritty)
-Super + Shift + P     = Start autorandr (projection)
+Super + C                = Start chromium (standard)
+Super + I                = Start chromium (incognito)
+Super + B                = Start chromium (sandboxed)
+Super + P                = Start pcmanfm (file manager)
+Super + Print            = Start scrot (screenshot)
+Super + T                = Start picom (transparent alacritty)
+Super + Shift + P        = Start autorandr (projection)
+Ctrl + Super + Backspace = Start poweroff (shutdown)
