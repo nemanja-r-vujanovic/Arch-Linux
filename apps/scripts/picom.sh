@@ -1,3 +1,7 @@
 #!/bin/bash
 
-picom --backend xrender
+if pgrep -x "picom" > "/dev/null"; then
+	pkill -x "picom"
+else
+	picom --backend "xrender"
+fi
