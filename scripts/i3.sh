@@ -7,7 +7,7 @@ sed -i "s|#font pango:DejaVu Sans Mono 8|font pango:DejaVu Sans 20|g" "$HOME/.co
 
 cat >> "$HOME/.config/i3/config" <<'EOF'
 
-exec --no-startup-id "$HOME/sync/apps/scripts/brightness.sh"
+exec --no-startup-id "$HOME/sync/apps/scripts/display.sh"
 exec --no-startup-id "$HOME/sync/apps/scripts/upgrade.sh"
 exec --no-startup-id "$HOME/sync/apps/scripts/wireplumber.sh"
 exec --no-startup-id "$HOME/sync/apps/scripts/policykit.sh"
