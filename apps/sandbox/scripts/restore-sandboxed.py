@@ -34,13 +34,13 @@ if (listing.returncode == 0):
 		if (run_command(f"firejail --get=sandbox {shlex.quote(source)}")):
 			counter += 1
 		else:
-			print(f"Failed to restore: {file}")
+			print(f"Failed to restore: {file}!")
 
 	if (not files):
-		print("Sandbox downloads folder has no regular files!")
+		print("Sandbox directory has no regular files!")
 	else:
-		print(f"Restored files: {counter}")
+		print(f"Restored files: {counter}.")
 
 else:
-	print("Cannot access sandbox downloads!")
+	print("Cannot access sandbox!")
 	print(listing.stderr.strip() or listing.stdout.strip())
