@@ -13,8 +13,7 @@ Section "InputClass"
 EndSection
 KEYBOARD
 
-echo "FONT=ter-132b
-KEYMAP=sr-latin" > "/etc/vconsole.conf"
+echo "FONT=ter-132b" > "/etc/vconsole.conf"
 
 echo "LANG=en_US.UTF-8" > "/etc/locale.conf"
 

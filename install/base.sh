@@ -18,7 +18,6 @@ mkdir -p "/mnt/etc/"
 
 cat > "/mnt/etc/vconsole.conf" <<'EOF'
 FONT=ter-132b
-KEYMAP=sr-latin
 EOF
 
 pacstrap -K "/mnt/" \
