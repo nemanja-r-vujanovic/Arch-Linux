@@ -1,4 +1,4 @@
-# Arch Linux
+# My setup: Arch Linux | i3 + Vim
 
 ## 1. Download
 ```bash
