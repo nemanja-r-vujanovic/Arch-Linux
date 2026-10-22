@@ -8,7 +8,7 @@ def run_command(command):
 sandbox_running = run_command("firejail --ls=sandbox ~/downloads/")
 counter = 0
 
-if (sandbox_running.strip()):
+if (sandbox_running):
 	os.chdir(os.path.expanduser("~/downloads/restored-sandbox/"))
 	files_output = run_command("firejail --ls=sandbox ~/downloads/")
 
