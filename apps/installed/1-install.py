@@ -28,7 +28,7 @@ def prompt(package):
 		full_path = os.path.join(path, file)
 
 		if (run_command(f"bash {full_path}")):
-			os.remove(full_path)
+			run_command(f"rm -- '{full_path}'")
 		else:
 			print(f"Installation of {package} failed!")
 
@@ -38,3 +38,5 @@ prompt("OOoTranslit")
 prompt("AnyDesk")
 
 run_command(f"bash {os.path.join(path, 'security-check.sh')}")
+run_command(f"rm {os.path.join(path, 'security-check.sh')}")
+run_command(f"rm {os.path.join(path, '1-install.py')}")

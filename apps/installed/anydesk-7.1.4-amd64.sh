@@ -8,3 +8,5 @@ cd "$HOME/sync/apps/installed/anydesk-7.1.4/"
 
 sudo bash "$HOME/sync/apps/installed/anydesk-7.1.4/install.sh" --install
 rm -r "$HOME/sync/apps/installed/anydesk-7.1.4/"
+
+echo
