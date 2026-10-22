@@ -3,6 +3,7 @@
 bash "$HOME/sync/scripts/mkdirs.sh"
 # ...
 bash "$HOME/sync/scripts/ufw.sh"
+bash "$HOME/sync/scripts/umask.sh"
 bash "$HOME/sync/scripts/pacman-conf.sh"
 bash "$HOME/sync/scripts/net-notify.sh"
 bash "$HOME/sync/scripts/vim.sh"
