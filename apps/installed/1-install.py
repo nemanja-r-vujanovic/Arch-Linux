@@ -37,4 +37,4 @@ prompt("Areal RNIDS")
 prompt("OOoTranslit")
 prompt("AnyDesk")
 
-run_command(f"bash '{os.path.join(path, 'security-check.sh')}'")
+run_command(f"bash {os.path.join(path, 'security-check.sh')}")
