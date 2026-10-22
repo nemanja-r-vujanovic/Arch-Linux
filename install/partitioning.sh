@@ -68,9 +68,7 @@ mkfs.ext4 -F -L "ARCH" "$P5"  # Root
 
 # Mount partitions:
 mount -t ext4 "$P5" "/mnt/"
-if [[ "UEFI" == "$boot_mode" ]]; then
-	mount --mkdir -o umask=0077 "$P1" "/mnt/boot/efi/"
-fi
+mount --mkdir -o umask=0077 "$P1" "/mnt/boot/efi/"
 swapon "$P3"
 
 lsblk "$disk"                 # Show result
