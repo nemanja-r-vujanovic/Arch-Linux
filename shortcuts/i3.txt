@@ -20,11 +20,11 @@ Super + Shift + Space    = Toggle tiling
 Super + Shift + R        = Restart i3
 Super + Shift + C        = Reload configs
 
+Super + T                = Toggle picom (transparent alacritty)
 Super + C                = Start chromium (standard)
 Super + I                = Start chromium (incognito)
 Super + B                = Start chromium (sandboxed)
 Super + P                = Start pcmanfm (file manager)
 Super + Print            = Start scrot (screenshot)
-Super + T                = Start picom (transparent alacritty)
 Super + Shift + P        = Start autorandr (projection)
 Ctrl + Super + Backspace = Start poweroff (shutdown)
