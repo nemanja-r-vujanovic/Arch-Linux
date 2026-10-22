@@ -1,31 +1,46 @@
 import os
+import shlex
 import subprocess
 
 def run_command(command):
-	result = subprocess.run(command, shell=True, capture_output=True, text=True)
+	result = subprocess.run(command, shell=True)
 	return result.returncode == 0
 
-sandbox_running = run_command("firejail --ls=sandbox ~/downloads/")
+listing = subprocess.run(
+	"firejail --ls=sandbox ~/downloads/",
+	shell=True,
+	capture_output=True,
+	text=True
+)
+
 counter = 0
 
-if (sandbox_running):
-	os.chdir(os.path.expanduser("~/downloads/restored-sandbox/"))
-	files_output = run_command("firejail --ls=sandbox ~/downloads/")
+if (listing.returncode == 0):
+	path = os.path.expanduser("~/downloads/restored-sandbox/")
+	os.makedirs(path, exist_ok=True)
+	os.chdir(path)
 
 	files = []
-	for line in files_output.splitlines()[2:]:
-		parts = line.split(maxsplit = 4)
-		if (len(parts) >= 5):
+	for line in listing.stdout.splitlines():
+		parts = line.split(maxsplit=4)
+
+		if (len(parts) == 5 and parts[0].startswith("-")):
 			files.append(parts[4])
 
 	for file in files:
-		print(f"Processing: {file}...")
-		run_command(f"firejail --get=sandbox ~/downloads/\"{file}\"")
-		counter += 1
+		print(f"Processing: {file}...", flush=True)
+		source = os.path.expanduser("~/downloads/") + file
+
+		if (run_command(f"firejail --get=sandbox {shlex.quote(source)}")):
+			counter += 1
+		else:
+			print(f"Failed to restore: {file}")
+
+	if (not files):
+		print("Sandbox downloads folder has no regular files!")
+	else:
+		print(f"Restored files: {counter}")
 
 else:
-	print("Sandbox is not running!")
-	exit()
-
-if (counter == 0):
-	print("Sandbox is empty!")
+	print("Cannot access sandbox downloads!")
+	print(listing.stderr.strip() or listing.stdout.strip())
