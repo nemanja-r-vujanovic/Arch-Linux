@@ -1,6 +1,6 @@
 #!/bin/bash
 
-notify-send -t 3000 "Sandbox is running."
+bash "$HOME/sync/apps/sandbox/scripts/check-sandbox.sh" &
 
 firejail \
 --dns="8.8.8.8" \
@@ -8,8 +8,5 @@ firejail \
 --profile="chromium-browser" \
 --private \
 chromium \
---no-remote \
 --password-store="basic" \
 --no-first-run
-
-bash "$HOME/sync/apps/sandbox/scripts/check-sandbox.sh"

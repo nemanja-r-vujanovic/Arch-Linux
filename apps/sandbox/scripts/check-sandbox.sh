@@ -2,8 +2,8 @@
 
 sleep 2
 
-firejail --join="sandbox" mkdir -p "$HOME/downloads/"
-
-if ! firejail --list | grep -q "sandbox"; then
-	notify-send -t 15000 "Cannot find sandbox!"
+if firejail --join="sandbox" mkdir -p "$HOME/downloads/"; then
+	notify-send -t 3000 "Sandbox is running."
+else
+	notify-send -t 15000 "Cannot prepare sandbox!"
 fi
