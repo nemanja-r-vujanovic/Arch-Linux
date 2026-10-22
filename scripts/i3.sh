@@ -23,6 +23,7 @@ bindsym $mod+p exec "$HOME/sync/apps/scripts/pcmanfm.sh"
 bindsym $mod+Print exec --no-startup-id "$HOME/sync/apps/scripts/scrot.sh"
 bindsym $mod+t exec --no-startup-id "$HOME/sync/apps/scripts/picom.sh"
 bindsym $mod+Shift+p exec --no-startup-id "$HOME/sync/apps/scripts/autorandr.sh"
+bindsym Ctrl+$mod+BackSpace exec --no-startup-id "$HOME/sync/apps/scripts/poweroff.sh"
 
 bar
 {
