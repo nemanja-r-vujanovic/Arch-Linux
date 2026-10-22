@@ -11,11 +11,11 @@ order += "tztime local"
 
 battery all
 {
-    format = "🔋 %percentage |"
+    format = "BAT: %percentage |"
 }
 
 tztime local
 {
-    format = "🗓️ %d.%m.%Y. – %H:%M:%S"
+    format = "DTM: %d.%m.%Y. – %H:%M:%S"
 }
 EOF
