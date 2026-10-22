@@ -14,6 +14,7 @@ exec --no-startup-id "$HOME/sync/apps/scripts/policykit.sh"
 exec --no-startup-id "$HOME/sync/apps/scripts/dunst.sh"
 exec --no-startup-id "$HOME/sync/apps/scripts/xset.sh"
 exec --no-startup-id "$HOME/sync/apps/scripts/nm-applet.sh"
+exec --no-startup-id "$HOME/sync/apps/scripts/parcellite.sh"
 exec --no-startup-id "$HOME/sync/apps/scripts/wallpaper.sh"
 
 bindsym $mod+c exec "$HOME/sync/apps/sandbox/scripts/chromium-standard.sh"
