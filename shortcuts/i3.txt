@@ -20,6 +20,17 @@ Super + Shift + Space    = Toggle tiling
 Super + Shift + R        = Restart i3
 Super + Shift + C        = Reload configs
 
+Ctrl + Super + F         = Maximize
+Ctrl + Super + S         = Minimize
+Ctrl + Super + W         = Top half
+Ctrl + Super + X         = Bottom half
+Ctrl + Super + A         = Left half
+Ctrl + Super + D         = Right half
+Ctrl + Super + Q         = Top-left corner
+Ctrl + Super + E         = Top-right corner
+Ctrl + Super + Y         = Bottom-left corner
+Ctrl + Super + C         = Bottom-right corner
+
 Super + T                = Toggle picom (transparent alacritty)
 Super + C                = Start chromium (standard)
 Super + I                = Start chromium (incognito)
