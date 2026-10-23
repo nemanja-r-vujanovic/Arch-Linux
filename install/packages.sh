@@ -29,7 +29,7 @@ htop scrot flameshot parcellite bleachbit vim pfetch gnome-calculator \
 gvfs gvfs-mtp \
 pcmanfm lximage-qt lxqt-archiver lxqt-admin alacritty \
 libcups cups system-config-printer which \
-i3-wm i3status dmenu ttf-dejavu xwallpaper picom libnotify dunst lxqt-policykit polkit udisks2 \
+i3-wm i3status dmenu ttf-dejavu xcursor-vanilla-dmz xwallpaper picom libnotify dunst lxqt-policykit polkit udisks2 \
 gnutls lib32-gnutls xdg-utils xdg-desktop-portal xdg-desktop-portal-gtk \
 git python python-pip tk gcc bash \
 mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader vulkan-tools amd-ucode terminus-font
