@@ -81,5 +81,5 @@ vim "Arch-Linux/install/inputs.sh"  # For automated install: ":10,89d"
 chmod +x "Arch-Linux/install/"*
 ```
 ```bash
-sudo bash "Arch-Linux/install/1-install.sh"
+bash "Arch-Linux/install/1-install.sh"
 ```
