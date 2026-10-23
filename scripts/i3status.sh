@@ -16,9 +16,9 @@ battery all
 	format = "BAT: %percentage %status |"
 	format_percentage = "%.0f%s"
 	format_down = ""
-	status_chr = "(charging)"
-	status_bat = "(discharging)"
-	status_full = "(fully charged)"
+	status_chr = "(+)"
+	status_bat = "(-)"
+	status_full = ""
 	status_idle = ""
 	status_unk = ""
 }
