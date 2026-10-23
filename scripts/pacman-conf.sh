@@ -6,7 +6,7 @@ if ! ping -q -c 1 "www.google.com" > "/dev/null" 2>&1; then
 fi
 
 echo "Uncomment: #Color
-Add: ParallelDownloads = 5"
+Keep/Add: ParallelDownloads = 5"
 
 echo -n "Press Enter to exit."
 read Enter
