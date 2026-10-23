@@ -7,6 +7,24 @@ sed -i "s|#font pango:DejaVu Sans Mono 8|font pango:DejaVu Sans 20|g" "$HOME/.co
 
 cat >> "$HOME/.config/i3/config" <<'EOF'
 
+# Maximize.
+bindsym $mod+Ctrl+f fullscreen disable, floating enable, resize set 100 ppt 100 ppt, move position 0 ppt 0 ppt
+
+# Minimize.
+bindsym $mod+Ctrl+s fullscreen disable, floating enable, resize set 70 ppt 70 ppt, move position center
+
+# Halves: bottom, left, right, top.
+bindsym $mod+Ctrl+x fullscreen disable, floating enable, resize set 100 ppt 50 ppt, move position 0 ppt 50 ppt
+bindsym $mod+Ctrl+a fullscreen disable, floating enable, resize set 50 ppt 100 ppt, move position 0 ppt 0 ppt
+bindsym $mod+Ctrl+d fullscreen disable, floating enable, resize set 50 ppt 100 ppt, move position 50 ppt 0 ppt
+bindsym $mod+Ctrl+w fullscreen disable, floating enable, resize set 100 ppt 50 ppt, move position 0 ppt 0 ppt
+
+# Corners: bottom-left, bottom-right, top-left, top-right.
+bindsym $mod+Ctrl+y fullscreen disable, floating enable, resize set 50 ppt 50 ppt, move position 0 ppt 50 ppt
+bindsym $mod+Ctrl+c fullscreen disable, floating enable, resize set 50 ppt 50 ppt, move position 50 ppt 50 ppt
+bindsym $mod+Ctrl+q fullscreen disable, floating enable, resize set 50 ppt 50 ppt, move position 0 ppt 0 ppt
+bindsym $mod+Ctrl+e fullscreen disable, floating enable, resize set 50 ppt 50 ppt, move position 50 ppt 0 ppt
+
 exec --no-startup-id "$HOME/sync/apps/scripts/display.sh"
 exec --no-startup-id "$HOME/sync/apps/scripts/upgrade.sh"
 exec --no-startup-id "$HOME/sync/apps/scripts/wireplumber.sh"
