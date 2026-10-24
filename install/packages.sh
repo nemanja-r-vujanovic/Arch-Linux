@@ -21,7 +21,7 @@ dosfstools util-linux ntfs-3g ntfsprogs e2fsprogs exfatprogs gparted \
 pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber libpulse lib32-libpulse alsa-plugins lib32-alsa-plugins pavucontrol-qt \
 mpv smplayer vokoscreen \
 xorg xorg-server xorg-xinit \
-lightdm \
+lightdm lightdm-gtk-greeter \
 xorg-xrandr autorandr redshift xclip \
 zip unzip 7zip unrar tar tree \
 chromium thunderbird libreoffice okular \
