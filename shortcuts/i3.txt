@@ -20,16 +20,20 @@ Super + Shift + Space    = Toggle tiling
 Super + Shift + R        = Restart i3
 Super + Shift + C        = Reload configs
 
-Ctrl + Super + F         = Maximize
-Ctrl + Super + S         = Minimize
-Ctrl + Super + W         = Top half
-Ctrl + Super + X         = Bottom half
-Ctrl + Super + A         = Left half
-Ctrl + Super + D         = Right half
-Ctrl + Super + Q         = Top-left corner
-Ctrl + Super + E         = Top-right corner
-Ctrl + Super + Y         = Bottom-left corner
-Ctrl + Super + C         = Bottom-right corner
+Ctrl + Super + F         = Maximize window
+Ctrl + Super + S         = Minimize window
+Ctrl + Super + W         = Move window to top half
+Ctrl + Super + X         = Move window to bottom half
+Ctrl + Super + A         = Move window to left half
+Ctrl + Super + D         = Move window to right half
+Ctrl + Super + Q         = Move window to top-left corner
+Ctrl + Super + E         = Move window to top-right corner
+Ctrl + Super + Y         = Move window to bottom-left corner
+Ctrl + Super + C         = Move window to bottom-right corner
+
+Super + F1               = Mute volume
+Super + F2               = Decrease volume
+Super + F3               = Increase volume
 
 Super + T                = Toggle picom (transparent alacritty)
 Super + C                = Start chromium (standard)
