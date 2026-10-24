@@ -1,5 +1,84 @@
 #!/bin/bash
 
+# Chromium:
+: <<'NOTES'
+echo "[Desktop Entry]
+Name=Chromium
+Exec=/home/$USER/sync/apps/sandbox/scripts/chromium-standard.sh
+Icon=/home/$USER/sync/apps/sandbox/icons/chromium-standard.png
+Type=Application
+Terminal=false
+GenericName=
+Comment=
+Categories=Network;" | sudo tee "/usr/share/applications/chromium.desktop" > "/dev/null"
+NOTES
+
+# Incognito Chromium:
+: <<'NOTES'
+echo "[Desktop Entry]
+Name=Incognito Chromium
+Exec=/home/$USER/sync/apps/sandbox/scripts/chromium-incognito.sh
+Icon=/home/$USER/sync/apps/sandbox/icons/chromium-incognito.png
+Type=Application
+Terminal=false
+GenericName=
+Comment=
+Categories=Network;" | sudo tee "/usr/share/applications/incognito_chromium.desktop" > "/dev/null"
+NOTES
+
+# Sandboxed Chromium:
+: <<'NOTES'
+echo "[Desktop Entry]
+Name=Sandboxed Chromium
+Exec=/home/$USER/sync/apps/sandbox/scripts/chromium-sandboxed.sh
+Icon=/home/$USER/sync/apps/sandbox/icons/chromium-sandboxed.png
+Type=Application
+Terminal=false
+GenericName=
+Comment=
+Categories=Network;" | sudo tee "/usr/share/applications/sandboxed_chromium.desktop" > "/dev/null"
+NOTES
+
+# Viber:
+# mv "viber.AppImage" "$HOME/sync/apps/installed/"
+# cd "$HOME/sync/apps/installed/"
+# chmod +x *".AppImage"
+# ./"viber.AppImage"
+: <<'NOTES'
+echo "[Desktop Entry]
+Name=Viber
+Exec=/home/$USER/sync/apps/installed/viber.AppImage
+Icon=viber
+Type=Application
+Terminal=false
+GenericName=
+Comment=
+Categories=Network;" | sudo tee "/usr/share/applications/viber.desktop" > "/dev/null"
+NOTES
+
+# XAMPP:
+# mv "xampp-linux"*"installer.run" "$HOME/sync/apps/installed/"
+# cd "$HOME/sync/apps/installed/"
+# chmod +x *".run"
+# sudo ./"xampp-linux"*"installer.run"
+# Uncheck: XAMPP Developer Files
+: <<'NOTES'
+echo "[Desktop Entry]
+Name=XAMPP
+Path=/opt/lampp
+Exec=sudo /opt/lampp/manager-linux-x64.run
+Icon=xampp
+Type=Application
+Terminal=false
+GenericName=
+Comment=
+Categories=Development;" | sudo tee "/usr/share/applications/xampp.desktop" > "/dev/null"
+NOTES
+# echo "$USER ALL=(root) NOPASSWD: /opt/lampp/manager-linux-x64.run" | sudo tee "/etc/sudoers.d/xampp" > "/dev/null"
+# sudo chmod u=r,g=r,o= "/etc/sudoers.d/xampp"
+# sudo visudo -cf "/etc/sudoers.d/xampp" > "/dev/null"
+# sudo pacman -S --needed --noconfirm libxcrypt-compat inetutils
+
 # Check:
 # menu://applications/
 # admin:///usr/share/applications/
