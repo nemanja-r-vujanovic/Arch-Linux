@@ -32,6 +32,6 @@ volume master
 
 tztime local
 {
-	format = "DTM: %a, %d.%m.%Y. – %H:%M:%S |"
+	format = "DTM: %A, %d.%m.%Y. – %H:%M:%S |"
 }
 EOF
