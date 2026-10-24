@@ -27,7 +27,7 @@ zip unzip 7zip unrar tar tree \
 chromium thunderbird libreoffice okular \
 htop scrot flameshot parcellite bleachbit vim pfetch gnome-calculator \
 gvfs gvfs-mtp \
-pcmanfm lximage-qt lxqt-archiver lxqt-admin alacritty \
+pcmanfm lximage-qt xarchiver lxqt-admin alacritty \
 libcups cups system-config-printer which \
 i3-wm i3status dmenu ttf-dejavu xwallpaper picom libnotify dunst lxqt-policykit polkit udisks2 \
 gnutls lib32-gnutls xdg-utils xdg-desktop-portal xdg-desktop-portal-gtk \
