@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cat > "/etc/lightdm/lightdm-gtk-greeter.conf" <<'EOF'
+sudo tee "/etc/lightdm/lightdm-gtk-greeter.conf" <<'EOF'
 [greeter]
 font-name = Sans 18
 background = #000000
