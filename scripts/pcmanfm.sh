@@ -26,7 +26,7 @@ view_mode=list
 show_hidden=1
 sort=name;ascending;
 columns=name:200;desc:96;size;mtime;
-toolbar=newtab;navigation;home;
+toolbar=newwin;newtab;navigation;
 show_statusbar=1
 pathbar_mode_buttons=0
 PCMANFM
