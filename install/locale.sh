@@ -9,9 +9,28 @@ cat > "/etc/X11/xorg.conf.d/00-keyboard.conf" <<'KEYBOARD'
 Section "InputClass"
 	Identifier "system-keyboard"
 	MatchIsKeyboard "on"
-	Option "XkbLayout" "me"
+	Option "XkbLayout" "me,rs"
+	Option "XkbVariant" "latinalternatequotes,alternatequotes"
+	Option "XkbOptions" "grp:alt_shift_toggle"
 EndSection
 KEYBOARD
+
+cat > "/etc/X11/xorg.conf.d/90-input.conf" <<'MOUSE'
+Section "InputClass"
+	Identifier "Pointer speed"
+	MatchIsPointer "on"
+	Driver "libinput"
+	Option "AccelSpeed" "1.00"
+EndSection
+
+Section "InputClass"
+	Identifier "Touchpad settings"
+	MatchIsTouchpad "on"
+	Driver "libinput"
+	Option "AccelSpeed" "0.25"
+	Option "Tapping" "on"
+EndSection
+MOUSE
 
 echo "FONT=ter-132b" > "/etc/vconsole.conf"
 
