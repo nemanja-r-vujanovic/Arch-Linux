@@ -26,6 +26,7 @@ bindsym $mod+Ctrl+q fullscreen disable, floating enable, resize set 50 ppt 50 pp
 bindsym $mod+Ctrl+e fullscreen disable, floating enable, resize set 50 ppt 50 ppt, move position 50 ppt 0 ppt
 
 exec --no-startup-id "$HOME/sync/apps/scripts/display.sh"
+exec --no-startup-id "$HOME/sync/apps/scripts/microphone.sh"
 exec --no-startup-id "$HOME/sync/apps/scripts/upgrade.sh"
 exec --no-startup-id "$HOME/sync/apps/scripts/wireplumber.sh"
 exec --no-startup-id "$HOME/sync/apps/scripts/policykit.sh"
