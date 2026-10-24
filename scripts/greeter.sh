@@ -10,3 +10,5 @@ clock-format = %a, %d.%m.%Y – %H:%M:%S
 indicators = ~clock;~a11y;~power
 screensaver-timeout = 0
 EOF
+
+echo
