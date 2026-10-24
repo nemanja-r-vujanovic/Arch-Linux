@@ -4,11 +4,11 @@ sed -i "s|exec i3-sensible-terminal|exec alacritty|g" "$HOME/.config/i3/config"
 
 sed -i 's|bindsym \$mod+d exec --no-startup-id dmenu_run|bindsym $mod+d exec --no-startup-id "$HOME/sync/apps/scripts/dmenu.sh"|g' "$HOME/.config/i3/config"
 
-sed -i 's|bindsym XF86AudioMute.*|bindsym $mod+F1 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status|' "$HOME/.config/i3/config"
+sed -i 's|bindsym XF86AudioMute .*|bindsym $mod+F1 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle \&\& $refresh_i3status|' "$HOME/.config/i3/config"
 
-sed -i 's|bindsym XF86AudioRaiseVolume.*|bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1% && $refresh_i3status|' "$HOME/.config/i3/config"
+sed -i 's|bindsym XF86AudioLowerVolume .*|bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1% \&\& $refresh_i3status|' "$HOME/.config/i3/config"
 
-sed -i 's|bindsym XF86AudioLowerVolume.*|bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1% && $refresh_i3status|' "$HOME/.config/i3/config"
+sed -i 's|bindsym XF86AudioRaiseVolume .*|bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1% \&\& $refresh_i3status|' "$HOME/.config/i3/config"
 
 sed -i "s|font pango:monospace 8|font pango:DejaVu Sans 20|g" "$HOME/.config/i3/config"
 
