@@ -1,44 +1,5 @@
 #!/bin/bash
 
-# Chromium:
-: <<'NOTES'
-echo "[Desktop Entry]
-Name=Chromium
-Exec=/home/$USER/sync/apps/sandbox/scripts/chromium-standard.sh
-Icon=/home/$USER/sync/apps/sandbox/icons/chromium-standard.png
-Type=Application
-Terminal=false
-GenericName=
-Comment=
-Categories=Network;" | sudo tee "/usr/share/applications/chromium.desktop" > "/dev/null"
-NOTES
-
-# Incognito Chromium:
-: <<'NOTES'
-echo "[Desktop Entry]
-Name=Incognito Chromium
-Exec=/home/$USER/sync/apps/sandbox/scripts/chromium-incognito.sh
-Icon=/home/$USER/sync/apps/sandbox/icons/chromium-incognito.png
-Type=Application
-Terminal=false
-GenericName=
-Comment=
-Categories=Network;" | sudo tee "/usr/share/applications/incognito_chromium.desktop" > "/dev/null"
-NOTES
-
-# Sandboxed Chromium:
-: <<'NOTES'
-echo "[Desktop Entry]
-Name=Sandboxed Chromium
-Exec=/home/$USER/sync/apps/sandbox/scripts/chromium-sandboxed.sh
-Icon=/home/$USER/sync/apps/sandbox/icons/chromium-sandboxed.png
-Type=Application
-Terminal=false
-GenericName=
-Comment=
-Categories=Network;" | sudo tee "/usr/share/applications/sandboxed_chromium.desktop" > "/dev/null"
-NOTES
-
 # Viber:
 # mv "viber.AppImage" "$HOME/sync/apps/installed/"
 # cd "$HOME/sync/apps/installed/"
@@ -171,10 +132,6 @@ NOTES
 # Select Free or Whole (only if filesystems are damaged/corrupted)
 # Choose a recovery destination on a different disk/filesystem (example: /run/media/user/USB/)
 # Press C to confirm the destination and begin recovery
-
-# VirtualBox Extension Pack:
-# mkdir -p "$HOME/VirtualBox/"
-# mv "Oracle_VirtualBox_Extension_Pack"*".vbox-extpack" "$HOME/VirtualBox/"
 
 # Download from official sites:
 # Viber (AppImage)
@@ -360,10 +317,14 @@ NOTES
 # rmdir "dir/"                                       # Delete one folder
 # exit
 
+# VirtualBox Extension Pack:
+# mkdir -p "$HOME/VirtualBox/"
+# mv "Oracle_VirtualBox_Extension_Pack"*".vbox-extpack" "$HOME/VirtualBox/"
+
 # VirtualBox Enable Drag & Drop
 # Update and Upgrade
 # Devices → Insert Guest Additions CD image
-# sudo "path_to_cd/VBoxLinuxAdditions.run"
+# sudo ./"path_to_cd/VBoxLinuxAdditions.run"
 # Devices → Drag and Drop → Host To Guest
 # Devices → Upgrade Guest Additions
 # systemctl poweroff
