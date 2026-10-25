@@ -62,6 +62,7 @@ mv *"autostart"* "/usr/share/applications/"
 
 # Ventoy ...
 
+rm "$HOME/sync/apps/removed/delete.txt"
 rm "$HOME/.viminfo"
 
 rm -r "$HOME/.copilot/"
