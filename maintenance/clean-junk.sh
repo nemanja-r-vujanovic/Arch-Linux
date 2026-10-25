@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if (( 0 != "$EUID" )); then
+	echo "Run script as root!"
+	exit 1
+fi
+
 cd "$HOME/sync/apps/sandbox/launchers/"
 cp *".desktop" "/usr/share/applications/"
 
