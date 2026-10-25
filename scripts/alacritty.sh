@@ -2,7 +2,7 @@
 
 cat > "$HOME/.config/alacritty/alacritty.toml" <<'EOF'
 [font]
-size = 30
+size = 20
 
 [window]
 opacity = 0.6
