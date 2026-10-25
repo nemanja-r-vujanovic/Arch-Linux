@@ -25,6 +25,7 @@ sudo dd if="archlinux-x86_64.iso" of="/dev/sdx" status=progress && systemctl pow
 ### UEFI/BIOS Setup: F2
 * Setup Defaults: F9
 * Wireless LAN: Enabled
+* AMD V (TM) Technology: Enabled
 * Flip to Boot: Disabled
 * Always On USB: Disabled
 * Secure Boot: Disabled
@@ -64,7 +65,7 @@ station wlan0 connect "enter ssid"
 exit
 ```
 ```bash
-ping -c 1 "www.google.com"          # If not connected: "Temporary failure in name resolution"
+ping -c 1 "www.google.com"               # If not connected: "Temporary failure in name resolution"
 ```
 
 ## 6. Installation
@@ -75,7 +76,13 @@ pacman -S -y --needed --noconfirm git
 git clone "https://github.com/nemanja-r-vujanovic/Arch-Linux.git"
 ```
 ```bash
-vim "Arch-Linux/install/inputs.sh"  # For automated install: ":10,89d"
+vim "Arch-Linux/install/partitioning.sh" # locl="$((swap + 300 * 1024))"
+```
+```bash
+lsblk                                    # "/dev/sda" or "/dev/nvme0n1"
+```
+```bash
+vim "Arch-Linux/install/inputs.sh"       # For automated install: ":10,89d"
 ```
 ```bash
 chmod +x "Arch-Linux/install/"*
