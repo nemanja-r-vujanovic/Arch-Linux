@@ -81,7 +81,6 @@ NOTES
 
 # Check:
 # menu://applications/
-# admin:///usr/share/applications/
 # $HOME/.local/share/applications/
 # $HOME/.config/lxqt/
 # $HOME/.local/share/Trash/
