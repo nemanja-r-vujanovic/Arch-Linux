@@ -55,12 +55,6 @@ NOTES
 # sudo visudo -cf "/etc/sudoers.d/xampp" > "/dev/null"
 # sudo pacman -S --needed --noconfirm libxcrypt-compat inetutils
 
-# Check:
-# menu://applications/
-# $HOME/.local/share/applications/
-# $HOME/.config/lxqt/
-# $HOME/.local/share/Trash/
-
 # Python modules:
 # mkdir -p "$HOME/sync/apps/python-modules/"
 # cd "$HOME/sync/apps/python-modules/"
@@ -115,6 +109,7 @@ NOTES
 # System: Recommended only
 # Thumbnails: All On
 # Thunderbird: All Off
+# VIM: All On
 # X11: All On
 
 # SMPlayer:
