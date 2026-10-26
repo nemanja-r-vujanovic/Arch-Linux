@@ -1,8 +1,10 @@
 #!/bin/bash
 
-sudo cp -r "/etc/chromium/policies/managed/" "$HOME/sync/"
+sudo cp -r "/etc/chromium/" "$HOME/sync/"
 sudo cp "/etc/pacman.conf" "$HOME/sync/"
 sudo cp "/etc/lightdm/lightdm-gtk-greeter.conf" "$HOME/sync/"
+sudo cp "/etc/lightdm/lightdm.conf" "$HOME/sync/"
+sudo cp "/etc/modprobe.d/" "$HOME/sync/"
 
 mv "$HOME/.vimrc" "$HOME/sync/"
 mv "$HOME/.bashrc" "$HOME/sync/"
