@@ -5,6 +5,7 @@
 # cd "$HOME/sync/apps/installed/"
 # chmod +x *".AppImage"
 # ./"viber.AppImage"
+
 : <<'NOTES'
 echo "[Desktop Entry]
 Name=Viber
@@ -16,6 +17,21 @@ GenericName=
 Comment=
 Categories=Network;" | sudo tee "/usr/share/applications/viber.desktop" > "/dev/null"
 NOTES
+
+: <<'NOTES'
+echo '#include <stdlib.h>
+
+int main(void)
+{
+	system("cd $HOME/sync/apps/installed/ \
+		&& ./viber.AppImage");
+	return 0;
+}' > viber.c
+NOTES
+
+# gcc "viber.c" -o "viber"
+# rm "viber.c"
+# sudo mv "viber" "/usr/bin/"
 
 # XAMPP:
 # mv "xampp-linux"*"installer.run" "$HOME/sync/apps/installed/"
@@ -155,7 +171,6 @@ NOTES
 # kolourpaint                                        # Microsoft Paint alternative
 # virtualbox virtualbox-host-dkms dkms linux-headers # VirtualBox
 # ...
-# xscreensaver                                       # Screensaver
 # papirus-icon-theme                                 # Icon theme
 # adwaita-icon-theme                                 # Icon theme
 # breeze                                             # Theme
@@ -163,7 +178,6 @@ NOTES
 # poppler                                            # PDF render
 # perl-image-exiftool                                # PDF metadata
 # tesseract-data-eng                                 # Tesseract OCR engine
-# vanilla-dmz                                        # Minimal mouse cursor
 # ...
 # Replaced with i3:
 # lxqt                                               # Desktop environment
