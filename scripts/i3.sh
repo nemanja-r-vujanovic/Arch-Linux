@@ -60,6 +60,11 @@ bar
 	status_command i3status
 	font pango:DejaVu Sans 20
 	height 35
+
+	colors
+	{
+		background #000000
+	}
 }
 EOF
 
