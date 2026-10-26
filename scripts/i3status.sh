@@ -7,12 +7,14 @@ general
 	interval = 1
 }
 
-order += "battery all"
+order += "battery 1"
 order += "volume master"
 order += "tztime local"
 
-battery all
+battery 1
 {
+	path = "/sys/class/power_supply/BAT1/uevent"
+	last_full_capacity = true
 	format = "BAT: %percentage %status |"
 	format_percentage = "%.0f%s"
 	format_down = ""
