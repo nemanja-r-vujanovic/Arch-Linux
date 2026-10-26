@@ -25,7 +25,7 @@ lightdm lightdm-gtk-greeter \
 xorg-xrandr autorandr redshift xclip \
 zip unzip 7zip unrar tar tree \
 chromium thunderbird libreoffice okular \
-htop scrot flameshot parcellite bleachbit vim pfetch gnome-calculator \
+htop scrot flameshot parcellite bleachbit vim nano pfetch gnome-calculator \
 gvfs gvfs-mtp \
 pcmanfm lximage-qt xarchiver lxqt-admin alacritty \
 libcups cups system-config-printer which \
