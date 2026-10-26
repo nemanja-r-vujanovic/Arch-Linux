@@ -23,8 +23,7 @@ echo '#include <stdlib.h>
 
 int main(void)
 {
-	system("cd $HOME/sync/apps/installed/ \
-		&& ./viber.AppImage");
+	system("cd $HOME/sync/apps/installed/ && ./viber.AppImage");
 	return 0;
 }' > viber.c
 NOTES
