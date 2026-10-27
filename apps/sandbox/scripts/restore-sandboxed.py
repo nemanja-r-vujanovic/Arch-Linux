@@ -28,7 +28,7 @@ if (listing.returncode == 0):
 			files.append(parts[4])
 
 	for file in files:
-		print(f"Processing: {file}...", flush=True)
+		print(f"Processing: {file}...\n", flush=True)
 		source = os.path.expanduser("~/downloads/") + file
 
 		if (run_command(f"firejail --get=sandbox {shlex.quote(source)}")):
@@ -39,7 +39,7 @@ if (listing.returncode == 0):
 	if (not files):
 		print("Sandbox directory has no regular files!")
 	else:
-		print(f"Restored files: {counter}.")
+		print(f"\nRestored files: {counter}.")
 
 else:
 	print("Cannot access sandbox!")
