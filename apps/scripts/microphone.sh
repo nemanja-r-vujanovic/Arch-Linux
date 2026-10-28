@@ -1,3 +1,5 @@
+#!/bin/bash
+
 pactl list short sources | while read -r id name rest; do
 	if [[ "$name" != *.monitor ]]; then
 		pactl set-source-volume "$id" 0%
