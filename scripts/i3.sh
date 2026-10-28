@@ -45,6 +45,7 @@ exec --no-startup-id "$HOME/sync/apps/scripts/xrdb.sh"
 exec --no-startup-id "$HOME/sync/apps/scripts/nm-applet.sh"
 exec --no-startup-id "$HOME/sync/apps/scripts/parcellite.sh"
 exec --no-startup-id "$HOME/sync/apps/scripts/wallpaper.sh"
+exec --no-startup-id "$HOME/sync/apps/scripts/picom.sh"
 
 bindsym $mod+c exec "$HOME/sync/apps/sandbox/scripts/chromium-standard.sh"
 bindsym $mod+i exec "$HOME/sync/apps/sandbox/scripts/chromium-incognito.sh"
