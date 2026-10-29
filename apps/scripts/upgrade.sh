@@ -14,7 +14,7 @@ if [[ "Sunday" == "$dayw" ]]; then
 	last=$(cat "$HOME/sync/apps/upgrade/date.txt")
 
 	if [[ "$date" != "$last" ]]; then
-		for (( i = 0; i < 720; i++ )); do
+		for (( i = 1; i <= 720; i += 1 )); do
 			notify-send -t 15000 "Sunday = Upgrade!"
 			sleep 60
 		done
