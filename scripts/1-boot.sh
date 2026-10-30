@@ -18,6 +18,7 @@ bash "$HOME/sync/scripts/pcmanfm.sh"
 bash "$HOME/sync/scripts/projector.sh"
 bash "$HOME/sync/scripts/dunstrc.sh"
 bash "$HOME/sync/scripts/aliases.sh"
+bash "$HOME/sync/scripts/featherpad.sh"
 bash "$HOME/sync/scripts/chromium-ublock.sh"
 bash "$HOME/sync/scripts/nobeep.sh"
 # ...
