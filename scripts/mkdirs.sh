@@ -10,6 +10,7 @@ mkdir -p "$HOME/.config/libfm/"
 mkdir -p "$HOME/.config/featherpad/"
 mkdir -p "$HOME/downloads/restored-sandbox/"
 mkdir -p "$HOME/screenshots/"
+
 sudo mkdir -p "/etc/chromium/policies/managed/"
 sudo mkdir -p "/etc/lightdm/"
 sudo mkdir -p "/etc/modprobe.d/"
