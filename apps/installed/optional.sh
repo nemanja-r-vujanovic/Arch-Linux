@@ -152,7 +152,7 @@ NOTES
 # Other packages:
 # code                                               # Visual Studio Code
 # netbeans                                           # Java GUI designer
-# glade                                              # C GUI designer
+# qt6-base qt6-tools                                 # Python & C++ GUI designer
 # nodejs npm                                         # Web and mobile apps
 # sqlitebrowser                                      # SQLite browser
 # audacity                                           # Audio editor
