@@ -9,7 +9,7 @@ read confirm
 
 confirm_upper=$(echo "$confirm" | tr '[:lower:]' '[:upper:]')
 
-if [[ "YES" != "$confirm_upper" ]]; then
+if [[ "$confirm_upper" != "YES" ]]; then
 	echo -e "\nUpgrade aborted!"
 	exit 1
 fi
@@ -56,7 +56,7 @@ read rboot
 
 rboot_upper=$(echo "$rboot" | tr '[:lower:]' '[:upper:]')
 
-if [[ "NO" == "$rboot_upper" ]]; then
+if [[ "$rboot_upper" == "NO" ]]; then
 	echo -e "\nReboot aborted!"
 	exit 1
 fi
