@@ -19,11 +19,16 @@ Categories=Network;" | sudo tee "/usr/share/applications/viber.desktop" > "/dev/
 NOTES
 
 : <<'NOTES'
-echo '#include <stdlib.h>
+echo '// system:
+#include <stdlib.h>
 
 int main(void)
 {
-	system("cd $HOME/sync/apps/installed/ && ./viber.AppImage");
+	if (system("cd $HOME/sync/apps/installed/ && ./viber.AppImage") != 0)
+	{
+		return 1;
+	}
+
 	return 0;
 }' > viber.c
 NOTES
@@ -99,13 +104,12 @@ NOTES
 # Python: Run Python File in Terminal: F5
 
 # BleachBit:
-# Bash: Temporary files: On, History: Off
+# Bash: History: Off, Temporary files: On
 # Chromium: All Off
 # Deep scan: All Off
 # journald: All On
 # LibreOffice: All On
 # pacman: All On
-# snap: All On
 # System: Recommended only
 # Thumbnails: All On
 # Thunderbird: All Off
@@ -152,7 +156,7 @@ NOTES
 # Other packages:
 # code                                               # Visual Studio Code
 # netbeans                                           # Java GUI designer
-# qt6-base qt6-tools                                 # Python & C++ GUI designer
+# qt6-base qt6-tools python-pyqt6                    # Python GUI designer
 # nodejs npm                                         # Web and mobile apps
 # sqlitebrowser                                      # SQLite browser
 # audacity                                           # Audio editor

@@ -2,6 +2,7 @@
 
 echo
 
+# Check firewall and listening ports:
 sudo ufw status verbose
 systemctl is-enabled ufw
 systemctl is-active ufw
