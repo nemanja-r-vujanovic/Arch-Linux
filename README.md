@@ -1,4 +1,4 @@
-# My setup: Arch Linux | i3 + Vim
+# My setup: Arch Linux | i3wm + Vim
 
 ## 1. Download
 ```bash
@@ -10,7 +10,7 @@ curl -L -o \
 ## 2. Bootable USB
 ### Ventoy:
 * Install
-* Paste
+* Copy & Paste
 * Update
 
 ### dd:
