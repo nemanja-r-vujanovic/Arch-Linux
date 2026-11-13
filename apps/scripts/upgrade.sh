@@ -2,14 +2,14 @@
 
 date=$(cat "$HOME/sync/apps/upgrade/date.txt")
 
-if [[ "" == "$date" ]]; then
+if [[ "$date" == "" ]]; then
 	sday=$(date -d "last sunday" +%d.%m.%Y.)
 	echo "$sday" > "$HOME/sync/apps/upgrade/date.txt"
 fi
 
 dayw=$(date +"%A")
 
-if [[ "Sunday" == "$dayw" ]]; then
+if [[ "$dayw" == "Sunday" ]]; then
 	date=$(date +%d.%m.%Y.)
 	last=$(cat "$HOME/sync/apps/upgrade/date.txt")
 
