@@ -83,7 +83,7 @@ read confirm_install
 
 confirm_install_upper=$(echo "$confirm_install" | tr '[:lower:]' '[:upper:]')
 
-if [[ "YES" != "$confirm_install_upper" ]]; then
+if [[ "$confirm_install_upper" != "YES" ]]; then
 	echo -e "\nInstallation aborted!"
 	exit 1
 fi

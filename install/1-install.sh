@@ -35,7 +35,7 @@ for script in "${scripts[@]}"; do
 done
 CHROOT
 
-if (( 0 != "$?" )); then
+if (( "$?" != 0 )); then
 	echo "Installation stopped!"
 	exit 1
 fi
