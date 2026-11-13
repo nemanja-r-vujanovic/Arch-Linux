@@ -7,10 +7,10 @@ Super + 2                = New workspace
 Super + Left             = Switch to left window
 Super + Right            = Switch to right window
 
-Alt + F4                 = Close app
+Alt + F4                 = Close apps (rare)
 Ctrl + Q                 = Close pcmanfm
 
-Super + Shift + Q        = Close alacritty
+Super + Shift + Q        = Close apps (common)
 Super + Shift + Left     = Move window to left
 Super + Shift + Right    = Move window to right
 Super + Shift + Up       = Move window to top
