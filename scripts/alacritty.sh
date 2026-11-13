@@ -10,7 +10,7 @@ decorations = "Full"
 padding = { x = 0, y = 0 }
 
 [scrolling]
-history = 100000
+history = 10000
 
 [cursor]
 style = { shape = "Block", blinking = "Never" }
