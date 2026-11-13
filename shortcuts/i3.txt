@@ -1,45 +1,46 @@
 Super + Enter            = Open alacritty
-Ctrl + +                 = Increase font in alacritty
-Ctrl + -                 = Decrease font in alacritty
+Ctrl + -                 = Decrease font
+Ctrl + +                 = Increase font
 
-Super + D                = Open dmenu
-Super + 2                = New workspace
-Super + Left             = Switch to left window
-Super + Right            = Switch to right window
-
-Alt + F4                 = Close apps (rare)
-Ctrl + Q                 = Close pcmanfm
-
-Super + Shift + Q        = Close apps (common)
-Super + Shift + Left     = Move window to left
-Super + Shift + Right    = Move window to right
-Super + Shift + Up       = Move window to top
-Super + Shift + Down     = Move window to bottom
-Super + Shift + 2        = Move window to workspace 2
-Super + Shift + Space    = Toggle tiling
-Super + Shift + R        = Restart i3
-Super + Shift + C        = Reload configs
-
-Ctrl + Super + F         = Maximize window
-Ctrl + Super + S         = Minimize window
-Ctrl + Super + W         = Move window to top half
-Ctrl + Super + X         = Move window to bottom half
-Ctrl + Super + A         = Move window to left half
-Ctrl + Super + D         = Move window to right half
-Ctrl + Super + Q         = Move window to top-left corner
-Ctrl + Super + E         = Move window to top-right corner
-Ctrl + Super + Y         = Move window to bottom-left corner
-Ctrl + Super + C         = Move window to bottom-right corner
-
-Super + F1               = Mute volume
+Super + F1               = Toggle mute
 Super + F2               = Decrease volume
 Super + F3               = Increase volume
 
-Super + T                = Toggle picom (transparent alacritty)
-Super + C                = Start chromium (standard)
-Super + I                = Start chromium (incognito)
-Super + B                = Start chromium (sandboxed)
-Super + P                = Start pcmanfm (file manager)
-Super + Print            = Start scrot (screenshot)
-Super + Shift + P        = Start autorandr (projection)
-Ctrl + Super + Backspace = Start poweroff (shutdown)
+Super + D                = Open dmenu (app launcher)
+Super + P                = Open pcmanfm (file manager)
+Super + C                = Open chromium (standard)
+Super + B                = Open chromium (sandboxed)
+Super + I                = Open chromium (incognito)
+Super + T                = Toggle picom (alacritty transparency)
+
+Super + Shift + 2        = Move window to workspace 2
+Super + 2                = Switch to workspace 2
+
+Super + Left             = Focus window on the left
+Super + Right            = Focus window on the right
+
+Super + Shift + R        = Restart i3
+Super + Shift + C        = Reload i3 config
+
+Super + Shift + Space    = Toggle tiling
+Super + Shift + Q        = Close window
+
+Super + Shift + Up       = Move window up
+Super + Shift + Down     = Move window down
+Super + Shift + Left     = Move window left
+Super + Shift + Right    = Move window right
+
+Ctrl + Super + F         = Maximize window
+Ctrl + Super + S         = Minimize window
+Ctrl + Super + W         = Snap window to top half
+Ctrl + Super + X         = Snap window to bottom half
+Ctrl + Super + A         = Snap window to left half
+Ctrl + Super + D         = Snap window to right half
+Ctrl + Super + Q         = Snap window to top-left corner
+Ctrl + Super + E         = Snap window to top-right corner
+Ctrl + Super + Y         = Snap window to bottom-left corner
+Ctrl + Super + C         = Snap window to bottom-right corner
+
+Super + Print            = Take a screenshot (scrot)
+Super + Shift + P        = Run autorandr (projection)
+Ctrl + Super + Backspace = Shut down (poweroff)
