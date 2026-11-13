@@ -1,4 +1,4 @@
 #!/bin/bash
 
-xset r rate 200 35 &
-xset s off -dpms &
+xset r rate 200 35
+xset s off -dpms
