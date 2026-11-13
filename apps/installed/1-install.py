@@ -12,17 +12,17 @@ def prompt(package):
 	print("Type YES to continue: ", end="")
 	confirm = input().upper().strip()
 
-	if ("YES" == confirm):
-		if ("Xerox Phaser" == package):
+	if (confirm == "YES"):
+		if (package == "Xerox Phaser"):
 			file = "Xerox_Phaser_3020.sh"
 
-		elif ("Areal RNIDS" == package):
+		elif (package == "Areal RNIDS"):
 			file = "ArealRNIDS-otf.sh"
 
-		elif ("OOoTranslit" == package):
+		elif (package == "OOoTranslit"):
 			file = "OOoTranslit-25.02.1.sh"
 
-		elif ("AnyDesk" == package):
+		elif (package == "AnyDesk"):
 			file = "anydesk-7.1.4-amd64.sh"
 
 		full_path = os.path.join(path, file)
