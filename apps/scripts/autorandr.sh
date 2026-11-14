@@ -1,3 +1,6 @@
 #!/bin/bash
 
-autorandr --load clone-largest --force
+autorandr \
+--load \
+clone-largest \
+--force

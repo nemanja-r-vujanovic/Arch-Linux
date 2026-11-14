@@ -2,14 +2,6 @@
 
 echo
 
-# Check firewall and listening ports:
-sudo ufw status verbose
-systemctl is-enabled ufw
-systemctl is-active ufw
-sudo ss -t -u -l -p -n
-
-echo
-
 # AnyDesk:
 sudo systemctl disable --now anydesk
 systemctl is-enabled anydesk
@@ -35,6 +27,14 @@ echo
 sudo systemctl disable --now ftp
 systemctl is-enabled ftp
 systemctl is-active ftp
+
+echo
+
+# Check firewall and listening ports:
+sudo ufw status verbose
+systemctl is-enabled ufw
+systemctl is-active ufw
+sudo ss -t -u -l -p -n
 
 echo
 

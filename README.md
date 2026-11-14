@@ -1,5 +1,7 @@
 # My setup: Arch Linux | i3wm + Vim
 
+*The perfect setup doesn't exi-*
+
 ## 1. Download
 ```bash
 curl -L -o \
@@ -18,7 +20,11 @@ curl -L -o \
 lsblk
 ```
 ```bash
-sudo dd if="archlinux-x86_64.iso" of="/dev/sdx" status=progress && systemctl poweroff
+sudo dd \
+if="archlinux-x86_64.iso" \
+of="/dev/sdx" \
+status=progress \
+&& systemctl poweroff
 ```
 
 ## 3. Boot
@@ -76,10 +82,10 @@ pacman -S -y --needed --noconfirm git
 git clone "https://github.com/nemanja-r-vujanovic/Arch-Linux.git"
 ```
 ```bash
-vim "Arch-Linux/install/partitioning.sh" # locl="$((swap + 300 * 1024))"
+vim "Arch-Linux/install/partitioning.sh" # Check: locl=
 ```
 ```bash
-lsblk                                    # "/dev/sda" or "/dev/nvme0n1"
+lsblk                                    # Check: /dev/nvme0n1 or /dev/sda
 ```
 ```bash
 vim "Arch-Linux/install/inputs.sh"       # For automated install: ":10,89d"

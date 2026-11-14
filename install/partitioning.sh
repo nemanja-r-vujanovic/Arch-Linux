@@ -13,16 +13,16 @@ parted --script "$disk" mklabel gpt
 # Partitioning (GPT):
 # EFI → Size: 512 MB → File System: fat32 → Mount Point: /boot/efi/ → Label: EFI → Flags: boot, esp
 # BIOS → Size: 8 MB → File System: cleared/unformatted → Flags: bios_grub
-# Swap → Size: 4096 MB → File System: linux-swap → Label: SWAP
-# Local → Size: 2048 MB → File System: ntfs → Label: LOCAL → Flags: msftdata
-# Root → Size: Remaining MB → File System: ext4 → Mount Point: / → Label: ARCH
+# Swap → Size: 4 GB → File System: linux-swap → Label: SWAP
+# Local → Size: 300 GB → File System: ntfs → Label: LOCAL → Flags: msftdata
+# Root → Size: Remaining GB → File System: ext4 → Mount Point: / → Label: ARCH
 
 # Size:
-start="1"
+start=1
 efi="$((start + 512))"
 bios="$((efi + 8))"
 swap="$((bios + 4096))"
-locl="$((swap + 2048))"
+locl="$((swap + 300 * 1024))"
 root="100%"
 
 # EFI:
@@ -54,9 +54,17 @@ udevadm settle
 
 # Partition device names (nvme uses p1, sata uses 1):
 if [[ "$disk" =~ nvme|mmcblk ]]; then
-	P1="${disk}p1"; P2="${disk}p2"; P3="${disk}p3"; P4="${disk}p4"; P5="${disk}p5"
+	P1="${disk}p1";
+	P2="${disk}p2";
+	P3="${disk}p3";
+	P4="${disk}p4";
+	P5="${disk}p5";
 else
-	P1="${disk}1"; P2="${disk}2"; P3="${disk}3"; P4="${disk}4"; P5="${disk}5"
+	P1="${disk}1";
+	P2="${disk}2";
+	P3="${disk}3";
+	P4="${disk}4";
+	P5="${disk}5";
 fi
 
 # Format partitions:
@@ -73,6 +81,8 @@ swapon "$P3"
 
 lsblk "$disk"                 # Show result
 
-seconds=10
-echo -e "\nPartitioning completed.\nInstallation starts in $seconds seconds..."
-sleep "$seconds"
+seconds=15
+echo -e "\nPartitioning completed."
+echo "Installation starts in $seconds seconds..."
+echo "Press Enter to start immediately, or wait for the countdown."
+read -t "$seconds" < "/dev/tty"

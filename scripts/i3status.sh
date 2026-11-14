@@ -13,13 +13,13 @@ order += "tztime local"
 
 battery 1
 {
-	path = "/sys/class/power_supply/BAT1/uevent"
 	last_full_capacity = true
+	path = "/sys/class/power_supply/BAT1/uevent"
 	format = "BAT: %percentage %status |"
 	format_percentage = "%.0f%s"
-	format_down = ""
-	status_chr = "(+)"
 	status_bat = "(-)"
+	status_chr = "(+)"
+	format_down = ""
 	status_full = ""
 	status_idle = ""
 	status_unk = ""

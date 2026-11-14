@@ -1,3 +1,6 @@
 #!/bin/bash
 
-systemctl --user enable wireplumber.service
+systemctl \
+--user \
+enable \
+wireplumber.service

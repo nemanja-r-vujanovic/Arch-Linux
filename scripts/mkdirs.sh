@@ -1,17 +1,17 @@
 #!/bin/bash
 
-mkdir -p "$HOME/.config/alacritty/"
 mkdir -p "$HOME/.config/i3/"
 mkdir -p "$HOME/.config/i3status/"
-mkdir -p "$HOME/.config/autorandr/"
+mkdir -p "$HOME/.config/alacritty/"
 mkdir -p "$HOME/.config/dunst/"
+mkdir -p "$HOME/.config/autorandr/"
+mkdir -p "$HOME/.config/featherpad/"
 mkdir -p "$HOME/.config/pcmanfm/default/"
 mkdir -p "$HOME/.config/libfm/"
-mkdir -p "$HOME/.config/featherpad/"
 mkdir -p "$HOME/downloads/restored-sandbox/"
 mkdir -p "$HOME/screenshots/"
 
-sudo mkdir -p "/etc/chromium/policies/managed/"
 sudo mkdir -p "/etc/lightdm/"
 sudo mkdir -p "/etc/modprobe.d/"
+sudo mkdir -p "/etc/chromium/policies/managed/"
 sudo mkdir -p "/root/.config/featherpad/"

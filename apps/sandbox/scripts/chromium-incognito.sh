@@ -1,3 +1,5 @@
 #!/bin/bash
 
-chromium --incognito --password-store=basic
+chromium \
+--incognito \
+--password-store=basic

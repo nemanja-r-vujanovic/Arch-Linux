@@ -6,11 +6,11 @@ Super + F1               = Toggle mute
 Super + F2               = Decrease volume
 Super + F3               = Increase volume
 
-Super + D                = Open dmenu (app launcher)
-Super + P                = Open pcmanfm (file manager)
-Super + C                = Open chromium (standard)
 Super + B                = Open chromium (sandboxed)
+Super + C                = Open chromium (standard)
 Super + I                = Open chromium (incognito)
+Super + P                = Open pcmanfm (file manager)
+Super + D                = Open dmenu (app launcher)
 Super + T                = Toggle picom (alacritty transparency)
 
 Super + Shift + 2        = Move window to workspace 2
@@ -25,17 +25,19 @@ Super + Shift + C        = Reload i3 config
 Super + Shift + Space    = Toggle tiling
 Super + Shift + Q        = Close window
 
+Ctrl + Super + S         = Minimize window
+Ctrl + Super + F         = Maximize window
+
 Super + Shift + Up       = Move window up
 Super + Shift + Down     = Move window down
 Super + Shift + Left     = Move window left
 Super + Shift + Right    = Move window right
 
-Ctrl + Super + F         = Maximize window
-Ctrl + Super + S         = Minimize window
 Ctrl + Super + W         = Snap window to top half
 Ctrl + Super + X         = Snap window to bottom half
 Ctrl + Super + A         = Snap window to left half
 Ctrl + Super + D         = Snap window to right half
+
 Ctrl + Super + Q         = Snap window to top-left corner
 Ctrl + Super + E         = Snap window to top-right corner
 Ctrl + Super + Y         = Snap window to bottom-left corner

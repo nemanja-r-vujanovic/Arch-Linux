@@ -13,10 +13,20 @@ source "Arch-Linux/install/fstab.sh"
 # ...
 
 mkdir -p "/mnt/root/install/"
-cp -r "Arch-Linux/install/." "/mnt/root/install/"
+cp -r \
+"Arch-Linux/install/"* \
+"/mnt/root/install/"
 
-arch-chroot "/mnt/" "/bin/bash" -s -- \
-"$timezone" "$username" "$hostname" "$password" "$disk" "$boot_mode" <<'CHROOT'
+arch-chroot \
+"/mnt/" \
+"/bin/bash" \
+-s -- \
+"$timezone" \
+"$username" \
+"$hostname" \
+"$password" \
+"$disk" \
+"$boot_mode" <<'CHROOT'
 timezone="$1"
 username="$2"
 hostname="$3"
@@ -30,7 +40,7 @@ scripts=(
 )
 
 for script in "${scripts[@]}"; do
-	printf '\nRunning %s.sh...\n' "$script"
+	echo -e "\nRunning $script.sh..."
 	source "/root/install/$script.sh"
 done
 CHROOT

@@ -1,10 +1,10 @@
 import os
-import shlex
 import subprocess
+import shlex
 
 def run_command(command):
 	result = subprocess.run(command, shell=True)
-	return result.returncode == 0
+	return (result.returncode == 0)
 
 listing = subprocess.run(
 	"firejail --ls=sandbox ~/downloads/",

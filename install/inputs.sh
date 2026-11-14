@@ -1,15 +1,15 @@
 #!/bin/bash
 
-disk="/dev/sda"
+disk="/dev/nvme0n1"
 timezone="Europe/Belgrade"
-username="user"
+username="nemanja"
 hostname="arch-btw"
-password="student"
+password=""
 confirm_password="$password"
 confirm_install="YES"
 
 # Disk:
-echo -e -n "\nEnter disk (example: /dev/sda or /dev/nvme0n1): "
+echo -e -n "\nEnter disk (example: /dev/nvme0n1 or /dev/sda): "
 read disk
 
 if (( "${#disk}" < 1 )); then
@@ -39,7 +39,7 @@ if [[ ! -e "/usr/share/zoneinfo/$timezone" ]]; then
 fi
 
 # Username:
-echo -n "Enter username (example: user): "
+echo -n "Enter username (example: nemanja): "
 read username
 
 if (( "${#username}" < 1 )); then
@@ -61,7 +61,7 @@ echo -n "Enter password: "
 read -s password
 echo
 
-if (( "${#password}" < 6 )); then
+if (( "${#password}" < 7 )); then
 	echo "Password is too short!"
 	exit 1
 fi

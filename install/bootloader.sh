@@ -1,12 +1,17 @@
 #!/bin/bash
 
-grub-install --target=i386-pc "$disk"
-
+# BIOS:
 grub-install \
---target=x86_64-efi \
+--target="i386-pc" \
+"$disk"
+
+# UEFI:
+grub-install \
+--target="x86_64-efi" \
 --efi-directory="/boot/efi/" \
---bootloader-id=GRUB \
+--bootloader-id="GRUB" \
 --removable \
 --no-nvram
 
-grub-mkconfig -o "/boot/grub/grub.cfg"
+grub-mkconfig -o \
+"/boot/grub/grub.cfg"

@@ -1,3 +1,5 @@
 #!/bin/bash
 
-ln -s clone-largest "$HOME/.config/autorandr/default"
+ln -s \
+clone-largest \
+"$HOME/.config/autorandr/default"

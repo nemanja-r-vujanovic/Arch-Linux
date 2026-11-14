@@ -1,3 +1,5 @@
 #!/bin/bash
 
-xrdb -merge "$HOME/.Xresources"
+xrdb \
+-merge \
+"$HOME/.Xresources"

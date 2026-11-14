@@ -1,3 +1,5 @@
 #!/bin/bash
 
-timedatectl set-ntp true
+timedatectl \
+set-ntp \
+true

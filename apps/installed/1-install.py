@@ -5,7 +5,7 @@ path = os.path.dirname(os.path.abspath(__file__))
 
 def run_command(command):
 	result = subprocess.run(command, shell=True, cwd=path)
-	return result.returncode == 0
+	return (result.returncode == 0)
 
 def prompt(package):
 	print(f"\nDo you want to install {package}?")

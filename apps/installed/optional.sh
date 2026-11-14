@@ -357,9 +357,9 @@ NOTES
 pacman -S -y --needed --noconfirm reflector
 reflector --ipv4 \
 --country Serbia,Bosnia,Croatia,Bulgaria,Romania \
---latest 10 \
 --protocol https \
 --sort rate \
+--latest 10 \
 --save "/etc/pacman.d/mirrorlist"
 NOTES
 
