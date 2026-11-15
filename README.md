@@ -23,8 +23,8 @@ lsblk
 sudo dd \
 if="archlinux-x86_64.iso" \
 of="/dev/sdx" \
-status=progress \
-&& systemctl poweroff
+status=progress && \
+systemctl poweroff
 ```
 
 ## 3. Boot
