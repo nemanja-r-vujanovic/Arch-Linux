@@ -2,4 +2,4 @@
 
 chromium \
 --incognito \
---password-store=basic
+--password-store="basic"

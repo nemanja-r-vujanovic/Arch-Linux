@@ -6,7 +6,7 @@ Esc                = Normal mode
 :wq                = Close with saving
 :q!                = Close without saving
 u                  = Undo
-Ctrl+r             = Redo
+Ctrl + r           = Redo
 /word              = Find case-sensitive (n = next; N = previous)
 /word\c            = Find case-insensitive (n = next; N = previous)
 y                  = Copy
@@ -20,7 +20,7 @@ x                  = Delete char
 D                  = Delete line
 v                  = Select char
 V                  = Select lines
-Ctrl+v             = Select rectangular
+Ctrl + v           = Select rectangular
 ggVG               = Select all
 gg                 = Jump to first line
 G                  = Jump to last line

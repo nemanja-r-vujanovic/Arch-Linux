@@ -13,3 +13,5 @@ sudo tee "/etc/chromium/policies/managed/extensions.json" <<'EOF'
 	}
 }
 EOF
+
+echo

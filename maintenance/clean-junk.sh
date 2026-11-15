@@ -34,6 +34,7 @@ mv \
 
 rm "$HOME/sync/apps/removed/delete.txt"
 rm "$HOME/.viminfo"
+rm "$HOME/.cache/vim/swap/"*
 
 rm -r "$HOME/.copilot/"
 rm -r "$HOME/thunderbird/"

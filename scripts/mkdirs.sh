@@ -8,6 +8,7 @@ mkdir -p "$HOME/.config/autorandr/"
 mkdir -p "$HOME/.config/featherpad/"
 mkdir -p "$HOME/.config/pcmanfm/default/"
 mkdir -p "$HOME/.config/libfm/"
+
 mkdir -p "$HOME/downloads/restored-sandbox/"
 mkdir -p "$HOME/screenshots/"
 
@@ -15,3 +16,5 @@ sudo mkdir -p "/etc/lightdm/"
 sudo mkdir -p "/etc/modprobe.d/"
 sudo mkdir -p "/etc/chromium/policies/managed/"
 sudo mkdir -p "/root/.config/featherpad/"
+
+echo

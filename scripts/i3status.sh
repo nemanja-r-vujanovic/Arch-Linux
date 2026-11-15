@@ -37,3 +37,5 @@ tztime local
 	format = "DTM: %A, %d.%m.%Y. – %H:%M:%S |"
 }
 EOF
+
+echo

@@ -20,7 +20,7 @@ file_dateol="$HOME/sync/apps/upgrade/date.txt"
 counter_old=$(cat "$file_countr")
 counter_new=$((counter_old + 1))
 date_formt1=$(date +%d.%m.%Y.)
-date_formt2=$(date +"(%A)")
+date_formt2=$(date +%A)
 date_formt3=$(date +%H:%M:%S)
 program_beg=$(date +%s)
 

@@ -3,3 +3,5 @@
 ln -s \
 clone-largest \
 "$HOME/.config/autorandr/default"
+
+echo

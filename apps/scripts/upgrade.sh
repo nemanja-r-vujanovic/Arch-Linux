@@ -7,7 +7,7 @@ if [[ "$date" == "" ]]; then
 	echo "$sday" > "$HOME/sync/apps/upgrade/date.txt"
 fi
 
-dayw=$(date +"%A")
+dayw=$(date +%A)
 
 if [[ "$dayw" == "Sunday" ]]; then
 	date=$(date +%d.%m.%Y.)
@@ -15,7 +15,10 @@ if [[ "$dayw" == "Sunday" ]]; then
 
 	if [[ "$date" != "$last" ]]; then
 		for (( i = 0; i < 720; i += 1 )); do
-			notify-send -t 15000 "Sunday = Upgrade!"
+			notify-send \
+			-t 15000 \
+			"Sunday = Upgrade!"
+
 			sleep 60
 		done
 	fi

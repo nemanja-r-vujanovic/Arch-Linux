@@ -10,12 +10,7 @@ curl -L -o \
 ```
 
 ## 2. Bootable USB
-### Ventoy:
-* Install
-* Copy & Paste
-* Update
-
-### dd:
+### Option 1 - dd:
 ```bash
 lsblk
 ```
@@ -26,6 +21,11 @@ of="/dev/sdx" \
 status=progress && \
 systemctl poweroff
 ```
+
+### Option 2 - Ventoy:
+* Install
+* Copy & Paste
+* Update
 
 ## 3. Boot
 ### UEFI/BIOS Setup: F2
@@ -66,7 +66,9 @@ station wlan0 get-networks
 ```bash
 station wlan0 connect "enter ssid"
 ```
-* (enter password)
+```bash
+enter password
+```
 ```bash
 exit
 ```

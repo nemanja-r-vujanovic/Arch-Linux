@@ -13,7 +13,7 @@ source "Arch-Linux/install/fstab.sh"
 # ...
 
 mkdir -p "/mnt/root/install/"
-cp -r \
+cp \
 "Arch-Linux/install/"* \
 "/mnt/root/install/"
 

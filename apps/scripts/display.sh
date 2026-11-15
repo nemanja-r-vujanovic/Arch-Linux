@@ -15,5 +15,5 @@ xrandr \
 --brightness "0.15"
 
 redshift \
--m randr \
+-m "randr" \
 -O "4000"

@@ -20,7 +20,7 @@ if [[ ! -b "$disk" ]]; then
 	echo "'$disk' is not a block device!"
 	exit 1
 fi
-if [[ "$(lsblk -d -n -o TYPE "$disk")" != "disk" ]]; then
+if [[ $(lsblk -d -n -o TYPE "$disk") != "disk" ]]; then
 	echo "'$disk' is not a whole disk!"
 	exit 1
 fi

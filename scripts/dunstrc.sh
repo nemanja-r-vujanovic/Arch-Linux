@@ -17,3 +17,5 @@ echo '[global]
 	appname = "flameshot"
 	skip_display = true
 	history_ignore = true' > "$HOME/.config/dunst/dunstrc"
+
+echo

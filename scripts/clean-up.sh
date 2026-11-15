@@ -3,8 +3,10 @@
 rm "$HOME/first-boot.md"
 rm -r "$HOME/sync/scripts/"
 
-sudo pacman -Rns \
+sudo pacman -R -n -s \
 xterm \
 firefox \
 l3afpad \
 cmake
+
+echo

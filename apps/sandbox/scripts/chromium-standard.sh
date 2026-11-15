@@ -1,4 +1,4 @@
 #!/bin/bash
 
 chromium \
---password-store=basic
+--password-store="basic"

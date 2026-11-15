@@ -53,7 +53,7 @@ partprobe "$disk"
 udevadm settle
 
 # Partition device names (nvme uses p1, sata uses 1):
-if [[ "$disk" =~ nvme|mmcblk ]]; then
+if [[ "$disk" =~ (nvme|mmcblk) ]]; then
 	P1="${disk}p1";
 	P2="${disk}p2";
 	P3="${disk}p3";
