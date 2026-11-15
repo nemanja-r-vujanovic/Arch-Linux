@@ -18,22 +18,7 @@ Comment=
 Categories=Network;" | sudo tee "/usr/share/applications/viber.desktop" > "/dev/null"
 NOTES
 
-: <<'NOTES'
-echo '// system:
-#include <stdlib.h>
-
-int main(void)
-{
-	if (system("cd $HOME/sync/apps/installed/ && ./viber.AppImage") != 0)
-	{
-		return 1;
-	}
-
-	return 0;
-}' > viber.c
-NOTES
-
-# gcc "viber.c" -o "viber"
+# gcc -std="c99" -Wall -Wextra -Wpedantic -fno-builtin -O0 "viber.c" -o "viber"
 # rm "viber.c"
 # sudo mv "viber" "/usr/bin/"
 
