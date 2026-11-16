@@ -9,5 +9,3 @@ alias uu='bash "$HOME/sync/maintenance/upgrade-system.sh"'
 alias rs='bash "$HOME/sync/maintenance/restore-sandboxed.sh"'
 alias fls='bash "$HOME/sync/maintenance/list-sandboxed.sh"'
 EOF
-
-echo

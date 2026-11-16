@@ -8,7 +8,7 @@ ntfsprogs \
 e2fsprogs
 
 wipefs -a "$disk"
-parted --script "$disk" mklabel gpt
+parted --script "$disk" mklabel "gpt"
 
 # Partitioning (GPT):
 # EFI → Size: 512 MB → File System: fat32 → Mount Point: /boot/efi/ → Label: EFI → Flags: boot, esp
@@ -19,22 +19,22 @@ parted --script "$disk" mklabel gpt
 
 # Size:
 start=1
-efi="$((start + 512))"
-bios="$((efi + 8))"
-swap="$((bios + 4096))"
-locl="$((swap + 300 * 1024))"
-root="100%"
+efi=$((start + 512))
+bios=$((efi + 8))
+swap=$((bios + 4 * 1024))
+locl=$((swap + 300 * 1024))
+root=100%
 
 # EFI:
 parted --script "$disk" mkpart primary fat32 "$start"MiB "$efi"MiB
 parted --script "$disk" name 1 "EFI"
-parted --script "$disk" set 1 boot on
-parted --script "$disk" set 1 esp on
+parted --script "$disk" set 1 "boot" "on"
+parted --script "$disk" set 1 "esp" "on"
 
 # BIOS:
 parted --script "$disk" mkpart primary "$efi"MiB "$bios"MiB
 parted --script "$disk" name 2 "BIOS"
-parted --script "$disk" set 2 bios_grub on
+parted --script "$disk" set 2 "bios_grub" "on"
 
 # Swap:
 parted --script "$disk" mkpart primary linux-swap "$bios"MiB "$swap"MiB
@@ -43,14 +43,14 @@ parted --script "$disk" name 3 "SWAP"
 # Local:
 parted --script "$disk" mkpart primary ntfs "$swap"MiB "$locl"MiB
 parted --script "$disk" name 4 "LOCAL"
-parted --script "$disk" set 4 msftdata on
+parted --script "$disk" set 4 "msftdata" "on"
 
 # Root:
 parted --script "$disk" mkpart primary ext4 "$locl"MiB "$root"MiB
 parted --script "$disk" name 5 "ARCH"
 
 partprobe "$disk"
-udevadm settle
+udevadm "settle"
 
 # Partition device names (nvme uses p1, sata uses 1):
 if [[ "$disk" =~ (nvme|mmcblk) ]]; then
@@ -76,7 +76,7 @@ mkfs.ext4 -F -L "ARCH" "$P5"  # Root
 
 # Mount partitions:
 mount -t ext4 "$P5" "/mnt/"
-mount --mkdir -o umask=0077 "$P1" "/mnt/boot/efi/"
+mount --mkdir -o umask="0077" "$P1" "/mnt/boot/efi/"
 swapon "$P3"
 
 lsblk "$disk"                 # Show result

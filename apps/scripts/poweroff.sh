@@ -1,3 +1,3 @@
 #!/bin/bash
 
-systemctl poweroff
+systemctl "poweroff"

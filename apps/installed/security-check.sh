@@ -3,44 +3,44 @@
 echo
 
 # AnyDesk:
-sudo systemctl disable --now anydesk
-systemctl is-enabled anydesk
-systemctl is-active anydesk
+sudo systemctl disable --now "anydesk.service"
+systemctl is-enabled "anydesk.service"
+systemctl is-active "anydesk.service"
 
 echo
 
 # SSH:
-sudo systemctl disable --now sshd
-systemctl is-enabled sshd
-systemctl is-active sshd
+sudo systemctl disable --now "sshd.service"
+systemctl is-enabled "sshd.service"
+systemctl is-active "sshd.service"
 
 echo
 
 # SFTP:
-sudo systemctl disable --now sftp
-systemctl is-enabled sftp
-systemctl is-active sftp
+sudo systemctl disable --now "sftp.service"
+systemctl is-enabled "sftp.service"
+systemctl is-active "sftp.service"
 
 echo
 
 # FTP:
-sudo systemctl disable --now ftp
-systemctl is-enabled ftp
-systemctl is-active ftp
+sudo systemctl disable --now "ftp.service"
+systemctl is-enabled "ftp.service"
+systemctl is-active "ftp.service"
 
 echo
 
 # Check firewall and listening ports:
-sudo ufw status verbose
-systemctl is-enabled ufw
-systemctl is-active ufw
+sudo ufw status "verbose"
+systemctl is-enabled "ufw.service"
+systemctl is-active "ufw.service"
 sudo ss -t -u -l -p -n
 
 echo
 
 # Enabled and currently running services:
-systemctl list-unit-files --state=enabled
-systemctl --type=service --state=running --no-pager
+systemctl list-unit-files --state="enabled"
+systemctl --type="service" --state="running" --no-pager
 
 echo
 
@@ -58,7 +58,7 @@ ftp_ownership=$(pacman -Q -o "$(command -v ftp)" | awk '{print $5}')
 echo
 
 # Package dependency information:
-pacman -Q -i "apparmor" | grep -E "^(Install Reason|Required By)"
 pacman -Q -i "$sshd_ownership" | grep -E "^(Install Reason|Required By)"
 pacman -Q -i "$sftp_ownership" | grep -E "^(Install Reason|Required By)"
 pacman -Q -i "$ftp_ownership" | grep -E "^(Install Reason|Required By)"
+pacman -Q -i "apparmor" | grep -E "^(Install Reason|Required By)"

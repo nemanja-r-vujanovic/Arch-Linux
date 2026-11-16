@@ -2,9 +2,9 @@
 
 pacman -S -y --needed --noconfirm reflector
 reflector --ipv4 \
---country Serbia,Bosnia,Croatia,Bulgaria,Romania \
---protocol https \
---sort rate \
+--country "Serbia,Bosnia,Croatia,Bulgaria,Romania" \
+--protocol "https" \
+--sort "rate" \
 --latest 10 \
 --save "/etc/pacman.d/mirrorlist"
 
@@ -37,12 +37,12 @@ git python python-pip tk gcc bash \
 mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader vulkan-tools amd-ucode terminus-font
 
 # Configure services:
-systemctl enable ufw.service                  # Firewall
-systemctl enable NetworkManager.service       # Networking
-systemctl enable cups.service                 # Printing
-systemctl enable bluetooth.service            # Bluetooth
-systemctl enable chronyd.service              # Time synchronization
-systemctl enable lightdm.service              # Graphical login
-systemctl enable polkit.service               # Authorization
-systemctl enable udisks2.service              # Removable drives
-systemctl set-default graphical.target        # Boot into graphical mode
+systemctl enable "ufw.service"                # Firewall
+systemctl enable "NetworkManager.service"     # Networking
+systemctl enable "cups.service"               # Printing
+systemctl enable "bluetooth.service"          # Bluetooth
+systemctl enable "chronyd.service"            # Time synchronization
+systemctl enable "lightdm.service"            # Graphical login
+systemctl enable "polkit.service"             # Authorization
+systemctl enable "udisks2.service"            # Removable drives
+systemctl set-default "graphical.target"      # Boot into graphical mode

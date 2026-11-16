@@ -2,7 +2,7 @@
 
 echo '[global]
 	font = "DejaVu Sans 20"
-	history_length = 100
+	history_length = 20
 
 [urgency_low]
 	timeout = 30s
@@ -17,5 +17,3 @@ echo '[global]
 	appname = "flameshot"
 	skip_display = true
 	history_ignore = true' > "$HOME/.config/dunst/dunstrc"
-
-echo

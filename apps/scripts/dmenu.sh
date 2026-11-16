@@ -1,5 +1,4 @@
 #!/bin/bash
 
-dmenu_run \
--fn \
+dmenu_run -fn \
 "DejaVu Sans-20"

@@ -42,7 +42,7 @@ Categories=Development;" | sudo tee "/usr/share/applications/xampp.desktop" > "/
 NOTES
 # echo "$USER ALL=(root) NOPASSWD: /opt/lampp/manager-linux-x64.run" | sudo tee "/etc/sudoers.d/xampp" > "/dev/null"
 # sudo chmod u=r,g=r,o= "/etc/sudoers.d/xampp"
-# sudo visudo -cf "/etc/sudoers.d/xampp" > "/dev/null"
+# sudo visudo -c -f "/etc/sudoers.d/xampp" > "/dev/null"
 # sudo pacman -S --needed --noconfirm libxcrypt-compat inetutils
 
 # Python modules:
@@ -170,16 +170,16 @@ NOTES
 # Import Chromium bookmarks:
 ## chrome://bookmarks/
 ## Top right corner → 3 vertical dots
-## Import bookmarks → Desktop/ → Select bookmarks HTML file → Open
+## Import bookmarks → downloads/ → Select bookmarks HTML file → Open
 # Export Chromium bookmarks:
 ## chrome://bookmarks/
 ## Top right corner → 3 vertical dots
-## Export bookmarks → Desktop/ → Save
+## Export bookmarks → downloads/ → Save
 
 # ThunderBird → ImportExportTools NG extension
 # Export:
-## Inbox → ImportExportTools NG → Export All Messages In Folder → Plain Text Format → Messages, Index and Attachments with Subfolder → OK → Desktop/ → Open
-## Sent → ImportExportTools NG → Export All Messages In Folder → Plain Text Format → Messages, Index and Attachments with Subfolder → OK → Desktop/ → Open
+## Inbox → ImportExportTools NG → Export All Messages In Folder → Plain Text Format → Messages, Index and Attachments with Subfolder → OK → downloads/ → Open
+## Sent → ImportExportTools NG → Export All Messages In Folder → Plain Text Format → Messages, Index and Attachments with Subfolder → OK → downloads/ → Open
 # Import:
 ## Inbox → ImportExportTools NG → Import EML Messages → Individual EML Messages → File type: All files (*.*) → Select all Inbox TXT files → Open
 ## Sent → ImportExportTools NG → Import EML Messages → Individual EML Messages → File type: All files (*.*) → Select all Sent TXT files → Open
@@ -256,7 +256,7 @@ NOTES
 # cd "$HOME/git-restored/reponame/"
 # git status
 # git log --oneline --all
-# git restore --source=ABCDEFG -- "Deleted"
+# git restore --source="ABCDEFG" -- "Deleted"
 # git status
 # git add "Deleted"
 
@@ -272,27 +272,27 @@ NOTES
 # pdftotext "file.pdf" "file.txt"
 
 # Convert PNG to TXT:
-# tesseract "image.png" "file"
+# tesseract "image.png" "file.txt"
 
 # xclip clipboard:
-# xclip -selection clipboard < /path_to_file
+# cat "file.txt" | xclip -selection "clipboard"
 
 # Print 158. line from file
-# sed -n '158p' "file"
+# sed -n '158p' "file.txt"
 
 # Print 140-160 lines from file
-# sed -n '140,160p' "file"
+# sed -n '140,160p' "file.txt"
 
 : <<'NOTES'
 exiftool
 
-exiftool -Title="HERE TITLE" \
-		 -Author="HERE AUTHOR" \
-		 -Creator="HERE CREATOR" \
+exiftool -Title="TITLE HERE" \
+		 -Author="AUTHOR HERE" \
+		 -Creator="CREATOR HERE" \
 		 -Producer="LibreOffice" \
-		 "HERE FILENAME"
+		 "FILENAME HERE"
 
-exiftool "HERE FILENAME"
+exiftool "FILENAME HERE"
 NOTES
 
 # SSH and SFTP:
@@ -315,8 +315,8 @@ NOTES
 # exit
 
 # VirtualBox Extension Pack:
-# mkdir -p "$HOME/VirtualBox/"
-# mv "Oracle_VirtualBox_Extension_Pack"*".vbox-extpack" "$HOME/VirtualBox/"
+# mkdir -p "$HOME/virtualbox/"
+# mv "Oracle_VirtualBox_Extension_Pack"*".vbox-extpack" "$HOME/virtualbox/"
 
 # VirtualBox Enable Drag & Drop
 # Update and Upgrade
@@ -324,7 +324,7 @@ NOTES
 # sudo ./"path_to_cd/VBoxLinuxAdditions.run"
 # Devices → Drag and Drop → Host To Guest
 # Devices → Upgrade Guest Additions
-# systemctl poweroff
+# systemctl "poweroff"
 
 # VirtualBox Enable USB
 # VirtualBox Settings → USB → Add new USB device filter + → Select USB → Select USB 3.0
@@ -341,9 +341,9 @@ NOTES
 : <<'NOTES'
 pacman -S -y --needed --noconfirm reflector
 reflector --ipv4 \
---country Serbia,Bosnia,Croatia,Bulgaria,Romania \
---protocol https \
---sort rate \
+--country "Serbia,Bosnia,Croatia,Bulgaria,Romania" \
+--protocol "https" \
+--sort "rate" \
 --latest 10 \
 --save "/etc/pacman.d/mirrorlist"
 NOTES
@@ -356,9 +356,9 @@ NOTES
 # nmcli general status                               # Check status
 # nmcli device status                                # List devices
 # nmcli connection show                              # List connections
-# nmcli device wifi connect "SSID" --ask
+# nmcli device wifi connect "enter ssid" --ask
 
 # Useful commands:
 : <<'NOTES'
-grep -i -r "test" .                                  # Search all files here for "test" (ignore case)
+grep -i -r -E "test" .                               # Search all files for "test" (ignore case)
 NOTES

@@ -18,8 +18,8 @@ lsblk
 sudo dd \
 if="archlinux-x86_64.iso" \
 of="/dev/sdx" \
-status=progress && \
-systemctl poweroff
+status="progress" && \
+systemctl "poweroff"
 ```
 
 ### Option 2 - Ventoy:
@@ -44,10 +44,10 @@ systemctl poweroff
 
 ## 4. Font
 ```bash
-setfont ter-132b
+setfont "ter-132b"
 ```
 ```bash
-loadkeys sr-latin
+loadkeys "sr-latin"
 ```
 
 ## 5. Wi-Fi connection
@@ -58,13 +58,13 @@ iwctl
 device list
 ```
 ```bash
-station wlan0 scan
+station "wlan0" scan
 ```
 ```bash
-station wlan0 get-networks
+station "wlan0" get-networks
 ```
 ```bash
-station wlan0 connect "enter ssid"
+station "wlan0" connect "enter ssid"
 ```
 ```bash
 enter password

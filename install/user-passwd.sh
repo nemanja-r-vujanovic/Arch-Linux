@@ -5,4 +5,5 @@ wheel -s \
 "/bin/bash" \
 "$username"
 
-echo "$username:$password" | chpasswd
+echo "$username:$password" | \
+chpasswd

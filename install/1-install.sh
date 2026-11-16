@@ -35,17 +35,25 @@ disk="$5"
 boot_mode="$6"
 
 scripts=(
-	time locale hostname hosts root-passwd
-	packages zram bootloader user-passwd sudo-wheel
+	"time"
+	"locale"
+	"hostname"
+	"hosts"
+	"root-passwd"
+	"packages"
+	"zram"
+	"bootloader"
+	"user-passwd"
+	"sudo-wheel"
 )
 
-for script in "${scripts[@]}"; do
+for script in ${scripts[@]}; do
 	echo -e "\nRunning $script.sh..."
 	source "/root/install/$script.sh"
 done
 CHROOT
 
-if (( "$?" != 0 )); then
+if (( $? != 0 )); then
 	echo "Installation stopped!"
 	exit 1
 fi

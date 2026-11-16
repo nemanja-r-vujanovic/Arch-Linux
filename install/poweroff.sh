@@ -2,4 +2,4 @@
 
 swapoff -a
 umount -R "/mnt/"
-systemctl poweroff
+systemctl "poweroff"

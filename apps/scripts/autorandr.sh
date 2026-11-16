@@ -2,5 +2,5 @@
 
 autorandr \
 --load \
-clone-largest \
+"clone-largest" \
 --force

@@ -2,7 +2,8 @@
 
 sleep 2
 
-if firejail --join="sandbox" mkdir -p "$HOME/downloads/"; then
+if firejail --join="sandbox" \
+mkdir -p "$HOME/downloads/"; then
 	notify-send \
 	-t 3000 \
 	"Sandbox is running."

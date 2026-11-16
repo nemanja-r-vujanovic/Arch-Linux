@@ -61,4 +61,4 @@ if [[ "$rboot_upper" == "NO" ]]; then
 	exit 1
 fi
 
-systemctl reboot
+systemctl "reboot"

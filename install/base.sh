@@ -6,9 +6,9 @@ pacman-key --populate archlinux
 
 pacman -S -y --needed --noconfirm reflector
 reflector --ipv4 \
---country Serbia,Bosnia,Croatia,Bulgaria,Romania \
---protocol https \
---sort rate \
+--country "Serbia,Bosnia,Croatia,Bulgaria,Romania" \
+--protocol "https" \
+--sort "rate" \
 --latest 10 \
 --save "/etc/pacman.d/mirrorlist"
 

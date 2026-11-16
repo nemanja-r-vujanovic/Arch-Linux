@@ -4,7 +4,10 @@
 # cd "/sys/class/backlight/amdgpu_bl1/"
 # echo "0" | sudo tee "brightness" > "/dev/null"
 
-screen=$(xrandr | grep -i -w "connected" | awk '{print $1}')
+screen=$(xrandr | \
+	grep -i -w "connected" | \
+	awk '{print $1}' \
+)
 
 xrandr \
 --output "$screen" \
@@ -12,8 +15,8 @@ xrandr \
 
 xrandr \
 --output "$screen" \
---brightness "0.15"
+--brightness 0.15
 
 redshift \
 -m "randr" \
--O "4000"
+-O 4000

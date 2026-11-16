@@ -3,4 +3,4 @@
 systemctl \
 --user \
 enable \
-wireplumber.service
+"wireplumber.service"

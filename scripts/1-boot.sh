@@ -30,4 +30,4 @@ bash "$HOME/sync/scripts/nobeep.sh"
 bash "$HOME/sync/scripts/git-sync.sh"
 bash "$HOME/sync/scripts/clean-up.sh"
 
-systemctl reboot
+systemctl "reboot"

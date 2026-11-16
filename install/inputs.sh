@@ -12,7 +12,7 @@ confirm_install="YES"
 echo -e -n "\nEnter disk (example: /dev/nvme0n1 or /dev/sda): "
 read disk
 
-if (( "${#disk}" < 1 )); then
+if (( ${#disk} < 1 )); then
 	echo "Disk cannot be empty!"
 	exit 1
 fi
@@ -29,7 +29,7 @@ fi
 echo -n "Enter timezone (example: Europe/Belgrade): "
 read timezone
 
-if (( "${#timezone}" < 1 )); then
+if (( ${#timezone} < 1 )); then
 	echo "Timezone cannot be empty!"
 	exit 1
 fi
@@ -42,7 +42,7 @@ fi
 echo -n "Enter username (example: nemanja): "
 read username
 
-if (( "${#username}" < 1 )); then
+if (( ${#username} < 1 )); then
 	echo "Username cannot be empty!"
 	exit 1
 fi
@@ -51,7 +51,7 @@ fi
 echo -n "Enter hostname (example: arch-btw): "
 read hostname
 
-if (( "${#hostname}" < 1 )); then
+if (( ${#hostname} < 1 )); then
 	echo "Hostname cannot be empty!"
 	exit 1
 fi
@@ -61,7 +61,7 @@ echo -n "Enter password: "
 read -s password
 echo
 
-if (( "${#password}" < 7 )); then
+if (( ${#password} < 7 )); then
 	echo "Password is too short!"
 	exit 1
 fi

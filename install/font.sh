@@ -1,4 +1,4 @@
 #!/bin/bash
 
-setfont ter-132b
-loadkeys sr-latin
+setfont "ter-132b"
+loadkeys "sr-latin"

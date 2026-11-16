@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if (( "$EUID" != 0 )); then
+if (( $EUID != 0 )); then
 	echo "Run script as root!"
 	exit 1
 fi
