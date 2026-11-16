@@ -8,5 +8,3 @@ xterm \
 firefox \
 l3afpad \
 cmake
-
-echo
