@@ -3,8 +3,8 @@ import subprocess
 
 path = os.path.dirname(os.path.abspath(__file__))
 
-def run_command(command):
-	result = subprocess.run(command, shell=True, cwd=path)
+def system(commands):
+	result = subprocess.run(commands, shell=True, cwd=path)
 	return (result.returncode == 0)
 
 def prompt(package):
@@ -27,8 +27,8 @@ def prompt(package):
 
 		full_path = os.path.join(path, file)
 
-		if (run_command(f"bash {full_path}")):
-			run_command(f"rm -- '{full_path}'")
+		if (system(f"bash {full_path}")):
+			system(f"rm -- '{full_path}'")
 		else:
 			print(f"Installation of {package} failed!")
 
@@ -37,6 +37,6 @@ prompt("Areal RNIDS")
 prompt("OOoTranslit")
 prompt("AnyDesk")
 
-run_command(f"bash {os.path.join(path, 'security-check.sh')}")
-run_command(f"rm {os.path.join(path, 'security-check.sh')}")
-run_command(f"rm {os.path.join(path, '1-install.py')}")
+system(f"bash {os.path.join(path, 'security-check.sh')}")
+system(f"rm {os.path.join(path, 'security-check.sh')}")
+system(f"rm {os.path.join(path, '1-install.py')}")

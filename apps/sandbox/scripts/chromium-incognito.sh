@@ -1,5 +1,5 @@
 #!/bin/bash
 
 chromium \
---incognito \
---password-store="basic"
+--password-store="basic" \
+--incognito

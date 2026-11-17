@@ -30,9 +30,11 @@ mv \
 *"autostart"* \
 "/usr/share/applications/"
 
-# Ventoy ...
+# ...
 
 rm "$HOME/sync/apps/removed/delete.txt"
+rm "$HOME/sync/apps/installed/ventoy"*"/log.txt"
+
 rm "$HOME/.viminfo"
 rm "$HOME/.cache/vim/swap/"*
 

@@ -45,6 +45,13 @@ NOTES
 # sudo visudo -c -f "/etc/sudoers.d/xampp" > "/dev/null"
 # sudo pacman -S --needed --noconfirm libxcrypt-compat inetutils
 
+# Ventoy:
+# tar -x -z -f "ventoy"*".tar.gz"
+# rm "ventoy"*".tar.gz"
+# mv "ventoy"* "$HOME/sync/apps/installed/"
+# cd "$HOME/sync/apps/installed/ventoy"*
+# ./"VentoyGUI.x86_64"
+
 # Python modules:
 # mkdir -p "$HOME/sync/apps/python-modules/"
 # cd "$HOME/sync/apps/python-modules/"

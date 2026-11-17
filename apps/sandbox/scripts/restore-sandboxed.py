@@ -2,8 +2,8 @@ import os
 import subprocess
 import shlex
 
-def run_command(command):
-	result = subprocess.run(command, shell=True)
+def system(commands):
+	result = subprocess.run(commands, shell=True)
 	return (result.returncode == 0)
 
 listing = subprocess.run(
@@ -31,13 +31,13 @@ if (listing.returncode == 0):
 		print(f"Processing: {file}...\n", flush=True)
 		source = os.path.expanduser("~/downloads/") + file
 
-		if (run_command(f"firejail --get=sandbox {shlex.quote(source)}")):
+		if (system(f"firejail --get=sandbox {shlex.quote(source)}")):
 			counter += 1
 		else:
 			print(f"Failed to restore: {file}!")
 
-	if (not files):
-		print("Sandbox directory has no regular files!")
+	if (len(files) == 0):
+		print("Sandbox directory has no files!")
 	else:
 		print(f"\nRestored files: {counter}.")
 

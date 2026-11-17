@@ -8,7 +8,7 @@ for (( i = 0; i < 3; i += 1 )); do
 		pactl set-source-mute "$id" 1
 	fi
 
-	done < <(pactl list short sources)
+	done < <(pactl "list" "short" "sources")
 
 	sleep 1
 done
