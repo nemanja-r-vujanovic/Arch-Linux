@@ -45,8 +45,8 @@ systemctl --type="service" --state="running" --no-pager
 echo
 
 # Autostart:
-ls -a -l "$HOME/.config/autostart/"
-ls -a -l "/etc/xdg/autostart/"
+ls -a -l -h "$HOME/.config/autostart/"
+ls -a -l -h "/etc/xdg/autostart/"
 
 echo
 
