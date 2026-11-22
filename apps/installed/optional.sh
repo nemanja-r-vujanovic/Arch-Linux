@@ -340,6 +340,7 @@ NOTES
 # sudo usermod -a -G vboxusers "$USER"
 # sudo modprobe -r kvm_amd
 # sudo modprobe -r kvm
+# systemctl "reboot"
 
 # Fix install (only if needed):
 # sudo pacman -S -y -y
