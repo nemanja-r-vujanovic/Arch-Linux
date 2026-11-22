@@ -74,6 +74,7 @@ bindsym Ctrl+$mod+BackSpace exec --no-startup-id "$HOME/sync/apps/scripts/powero
 bar
 {
 	status_command i3status
+	position top
 	height 35
 	font pango:DejaVu Sans 20
 
