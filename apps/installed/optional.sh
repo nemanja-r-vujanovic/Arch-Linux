@@ -4,7 +4,6 @@
 # mv "viber.AppImage" "$HOME/sync/apps/installed/"
 # cd "$HOME/sync/apps/installed/"
 # chmod +x *".AppImage"
-# ./"viber.AppImage"
 
 : <<'NOTES'
 echo "[Desktop Entry]
@@ -72,7 +71,7 @@ NOTES
 # Remove LibreOffice recently used font colors:
 # Close LibreOffice completely
 # cp "$HOME/.config/libreoffice/4/user/registrymodifications.xcu" "$HOME/.config/libreoffice/4/user/registrymodifications.xcu.bak"
-# vim "$HOME/.config/libreoffice/4/user/registrymodifications.xcu"
+# featherpad "$HOME/.config/libreoffice/4/user/registrymodifications.xcu"
 # Search for "RecentColor" entries
 # Delete <item ... oor:name="RecentColor" ... </item>
 # Delete <item ... oor:name="RecentColorName" ... </item>
@@ -194,13 +193,13 @@ NOTES
 # Browser bookmarks: google.com (Google), youtube.com (YouTube), chess.com/home (Chess), chatgpt.com (ChatGPT), github.com/nemanja-r-vujanovic?tab=repositories (GitHub), ar.asss.edu.rs (ASSS-AR), onedrive.live.com/my (OneDrive), outlook.live.com/mail/ (Outlook), wiki.archlinux.org (ArchWiki), supabase.com/dashboard/organizations (Supabase)
 
 # Journald:
-# sudo vim "/etc/systemd/journald.conf"
+# sudo featherpad "/etc/systemd/journald.conf"
 # SystemMaxUse=256M
 # MaxRetentionSec=7day
 # sudo systemctl restart systemd-journald
 
 # Grub customizer without grub customizer:
-# sudo vim "/etc/default/grub"
+# sudo featherpad "/etc/default/grub"
 
 : <<'NOTES'
 GRUB_TIMEOUT_STYLE="menu"
@@ -213,28 +212,25 @@ GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet"
 NOTES
 
 # sudo grub-mkconfig -o "/boot/grub/grub.cfg"
-# sudo vim "/boot/grub/grub.cfg"
+# sudo featherpad "/boot/grub/grub.cfg"
 
 # Delete completely:
 # submenu 'Advanced options for Arch Linux' ... {}
 : <<'NOTES'
 ### BEGIN /etc/grub.d/30_uefi-firmware ###
-if [ "$grub_platform" = "efi" ]; then
-	fwsetup --is-supported
-	if [ "$?" = 0 ]; then
-		menuentry 'UEFI Firmware Settings' $menuentry_id_option 'uefi-firmware' {
-			fwsetup
-		}
-	fi
-fi
+...
 ### END /etc/grub.d/30_uefi-firmware ###
+
+### BEGIN /etc/grub.d/31_efi_bootnext ###
+...
+### END /etc/grub.d/31_efi_bootnext ###
 NOTES
 
 # System installed (date):
-# stat / | grep -i "birth"
+# stat "/" | grep -i "birth"
 
 # Remove programs from Open With:
-# vim "$HOME/.config/mimeapps.list"
+# featherpad "$HOME/.config/mimeapps.list"
 
 # USB formating:
 # lsblk                                              # List disk partitions

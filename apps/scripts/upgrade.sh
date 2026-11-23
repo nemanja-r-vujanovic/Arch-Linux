@@ -4,7 +4,7 @@ date=$(cat "$HOME/sync/apps/upgrade/date.txt")
 
 if [[ "$date" == "" ]]; then
 	sday=$(date -d "last sunday" +%d.%m.%Y.)
-	echo "$sday" > "$HOME/sync/apps/upgrade/date.txt"
+	echo -n "$sday" > "$HOME/sync/apps/upgrade/date.txt"
 fi
 
 dayw=$(date +%A)
